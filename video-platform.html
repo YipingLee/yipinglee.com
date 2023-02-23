@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Yiping Lee's Portfolio</title>
+  <meta name="description" content="Yiping Lee (Phoebe) is a UI/UX designer who is passionate about solving problems through compelling design solutions.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+
+
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">Home</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index.html#projects">Projects</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about.html">About</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2023 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="md:d-none ml-30">
+                    <a href="login.html" class="button -sm -green text-white">Sign in</a>
+                  </div>
+                  -->
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      Close
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <div class="content-wrapper  js-content-wrapper">
+        <!--
+        <section class="page-header -image-portfolio">
+          <div data-anim="slide-up" class="page-header__bg">
+            <img class="initial-img" src="img/portfolio/single/3/bg.jpg" alt="Page header">
+          </div>
+          <div class="container">
+            <div class="page-header__content">
+              <div class="row justify-center text-center">
+                <div class="col-lg-8 col-md-10">
+                  <div data-anim="slide-up delay-1">
+                    <h1 class="page-header__title lh-14 text-white">Streaming Service Platform Redesign</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        -->
+
+        <section class="page-header -text -">
+          <div class="container">
+            <div class="page-header__content">
+              <div class="row justify-between">
+                <div class="col-xl-6 col-lg-7 col-md-10">
+                  <div data-anim="slide-up">
+                    <h1 class="page-header__title lh-14">Streaming Service Platform Redesign</h1>
+                  </div>
+                  <div data-anim="slide-up delay-2" class="mt-4">
+                    <p class="page-header__text layout-pb-md">The platform was released years ago. There are several reasons why stakeholders decided to redesign the platform, including improved usability, enhanced discoverability, and increased engagement to improve the user experience and make it more enjoyable.</p>
+                  </div>
+                </div>
+                
+                <div class="col-xl-4 col-lg-5 col-md-10">
+                  <div class="row x-gap-32 y-gap-40">
+                    <div class="col-6">
+                      <h5 class="text-xl fw-600">Role</h5>
+                      <div class="y-gap-4 mt-12">
+                        <p>UI/UX designer</p>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h5 class="text-xl fw-600">Device</h5>
+                      <div class="y-gap-4 mt-12">
+                        <p>Mobile and desktop</p>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h5 class="text-xl fw-600">Tools</h5>
+                      <div class="y-gap-4 mt-12">
+                        <p>Figma, illustrator and zeplin</p>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h5 class="text-xl fw-600">Published</h5>
+                      <div class="y-gap-4 mt-12">
+                        <p>October 2021</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/video_platform/video_platform.png"></div>
+        </section>
+
+        <div class="layout-pt-md"></div>
+
+        <section class="layout-pt-sm layout-pb-sm">
+          <div class="container">
+            <div class="row y-gap-64">
+              <div class="col-12">
+                <div class="row y-gap-16 justify-between">
+                  <div class="col-lg-4">
+                    <h4 class="text-xl fw-600">Key Challenge</h4>
+                  </div>
+                  <div class="col-lg-8 col-md-10">
+                    <ul class="ul-list y-gap-16">
+                      <li class="">Redesign the platform to optimize design guidelines, but maintain the same vibe</li>
+                      <li class="">Add and optimize functions within the old structure</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row y-gap-16 justify-between">
+                  <div class="col-lg-4">
+                    <h4 class="text-xl fw-600">Solution</h4>
+                  </div>
+                  <div class="col-lg-8 col-md-10">
+                    <ul class="ul-list y-gap-16">
+                      <li class="">Improved usability: improve the overall usability of the platform by making it easier for users to find and access the content they are looking for</li>
+                      <li class="">Increased discoverability: help users discover new content by providing a more intuitive and visually appealing way to browse and search for content</li>
+                      <li class="">Increased engagement: by providing users with a more visually appealing and user-friendly platform, encouraging them to spend more time on the platform and engage with the content</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!--
+              <div class="col-12">
+                <div class="row y-gap-16 justify-between">
+                  <div class="col-lg-4">
+                    <h4 class="text-xl fw-600">04. JQuery Power</h4>
+                  </div>
+                  <div class="col-lg-8 col-md-10">
+                    <p>Stet clita bergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia. </p>
+                  </div>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+        </section>
+        
+        <div class="layout-pt-md"></div>
+
+        <!-- mobile -->
+        <section class="layout-pt-md layout-pb-md section-bg-color">
+          <div class="section-bg-color__item -wide"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-auto">
+                <div class="sectionHeading">
+                  <div class="sectionHeading__subtitle">
+                    <span>Mobile</span>
+                  </div>
+                  <h2 class="sectionHeading__title">Manga Page</h2>
+                  <section class="layout-pt-sm layout-pb-sm">
+                    <div class="container">
+                      <div class="row y-gap-48 justify-between items-center">
+                        <div class="col-xl-6 col-lg-6">
+                          <img src="img/projects/video_platform/manga_homepage.png" alt="image" class="initial-img">
+                        </div>
+                        <div class="col-xl-5 col-lg-6">
+                          <div class="sectionHeading ">
+                            <h2 class="sectionHeading__title">Home Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add search function allows users to quickly and easily find specific content on the platform</li>
+                            <li class="">Optimized search page and add tag-based filters to make users easier to find the video they have interest</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-48 justify-between items-center">
+                        <div class="col-xl-5 col-lg-6 order-lg-1 order-2">
+                          <div class="sectionHeading ">
+                            <h2 class="sectionHeading__title">Read More Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add status to let users enhance their overall enjoyment of a manga series by providing them with a clear understanding of what to expect</li>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 order-lg-2 order-1">
+                          <img src="img/projects/video_platform/manga_read_more_page.png" alt="image" class="initial-img">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 items-center">
+                        <div class="col-lg-8">
+                          <img class="initial-img" src="img/projects/video_platform/manga_reading_page.png" alt="image">
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="sectionHeading">
+                            <h2 class="sectionHeading__title">Reading Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add status to encourage viewership by making it easier for users to discover and learn more about the series</li>
+                            <li class="">Add continue reading button to allows users to easily pick up where they left off when reading a manga series, without having to search for the next chapter</li>
+                            <li class="">Optimize chapter selection area  to let users choose chapter easily</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of mobile -->
+
+        <div class="layout-pt-md"></div>
+
+        <!-- desktop -->
+        <section class="layout-pt-md layout-pb-md section-bg-color">
+          <div class="section-bg-color__item -wide"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-auto">
+                <div class="sectionHeading">
+                  <div class="sectionHeading__subtitle">
+                    <span>Desktop</span>
+                  </div>
+                  <h2 class="sectionHeading__title">Drama Page</h2>
+
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between items-center">
+                        <div class="col-lg-4 order-lg-1 order-2">
+                          <div class="sectionHeading">
+                            <h2 class="sectionHeading__title">Home Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add banner section can encourage users to interact with the content and spend more time on the platforms</li>
+                            <li class="">Add actors and actresses information for users who are looking for information about a specific project and want to know who is involved</li>
+                          </ol>
+                        </div>
+                        <div class="col-lg-8 order-lg-2 order-1">
+                          <img class="initial-img" src="img/projects/video_platform/drama_homepage.png" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 items-center">
+                        <div class="col-lg-8">
+                          <img class="initial-img" src="img/projects/video_platform/watch_more_page.png" alt="image">
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="sectionHeading">
+                            <h2 class="sectionHeading__title">Watch more Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add tag-based filters to encourage users to spend more time on the platform by providing them with a way to easily discover and explore new content</li>
+                            <li class="">Add actors and actresses information can make it easier for users to find and discover content related to a particular actor or actress</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between items-center">
+                        <div class="col-lg-4 order-lg-1 order-2">
+                          <div class="sectionHeading">
+                            <h2 class="sectionHeading__title">Watching Page</h2>
+                          </div>
+                          <ol class="ol-list y-gap-16 pt-24 text-left">
+                            <li class="">Add previous episodes and next episodes buttons allow users to easily navigate between episodes, without having to leave the video player or search for the next episode to improve the overall user experience and make it more enjoyable for users to watch multiple episodes in a row</li>
+                            <li class="">Prioritize the episodes section to let users choose episodes easily</li>
+                            <li class="">Add director, actor, actresses and  drama type to help users discover new content by allowing them to browse and explore items that are related to specific tags</li>
+                          </ol>
+                        </div>
+                        <div class="col-lg-8 order-lg-2 order-1">
+                          <img class="initial-img" src="img/projects/video_platform/watching_page.png" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of desktop -->
+
+        <div class="layout-pt-lg"></div>
+
+        <!-- design guideline -->
+        <section class="layout-pt-md layout-pb-md section-bg-color">
+          <div class="section-bg-color__item -wide"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-auto">
+                <div class="sectionHeading">
+                  <h2 class="sectionHeading__title">Design Guideline</h2>
+                </div>
+              </div>
+              <div class="col-12 layout-pt-xs">
+                <img class="initial-img" src="img/projects/video_platform/component.png" alt="image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of design guideline -->
+
+        <div class="layout-pt-lg"></div>
+
+        <!-- design guideline -->
+        <!--
+        <section class="layout-pt-md layout-pb-md section-bg-color">
+          <div class="section-bg-color__item -wide"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-auto">
+                <div class="sectionHeading">
+                  <h2 class="sectionHeading__title">Design Guideline</h2>
+                </div>
+              </div>
+              <div class="col-12 layout-pt-xs">
+                <img class="initial-img" src="img/projects/video_platform/component.png" alt="image">
+              </div>
+            </div>
+          </div>
+        </section>
+        -->
+        <!-- design guideline -->
+
+        <!-- backend -->
+        <section class="layout-pt-md layout-pb-md section-bg-color">
+          <div class="section-bg-color__item -wide"></div>
+          <div class="col-auto">
+            <div class="sectionHeading">
+              <!--
+              <div class="sectionHeading__subtitle">
+                <span>Design Guideline</span>
+              </div>
+              -->
+              <h2 class="sectionHeading__title text-center">Backend</h2>
+            </div>
+          </div>
+          <section class="layout-pt-xs layout-pb-sm">
+            <div class="container">
+              <div class="row justify-center">
+                <div class="col-xl-8 col-lg-9">
+                  <div class="sectionSlider relative js-sectionSlider" data-cursor-slider="slider" data-gap="48" data-slider-col="base-1 lg-1 md-1 sm-1" data-center data-loop>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_1.png" alt="Image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_2.png" alt="Image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_3.png" alt="Image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_4.png" alt="Image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_5.png" alt="Image">
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="ratio ratio-97:55">
+                          <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/video_platform/backend_6.png" alt="Image">
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="nav -slider -absolute-center z-5 px-30 justify-between md:justify-center md:pt-60 sm:pt-40">
+                      <div data-cursor class="nav__item -left js-prev">
+                        <i class="icon" data-feather="arrow-left"></i>
+                      </div>
+  
+                      <div data-cursor class="nav__item -right ml-20 js-next">
+                        <i class="icon" data-feather="arrow-right"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- end of backend -->
+
+        <div class="layout-pt-lg"></div>
+
+        <div class="layout-pb-lg">
+          <section class="">
+            <div class="container">
+              <div class="related-nav py-30">
+                <div class="row justify-between items-center">
+                  <div class="col-md-auto col-6">
+                    <a data-barba href="gaming.html" class="related-nav__item -prev decoration-none">
+                      <div class="related-nav__arrow">
+                        <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                      </div>
+                      <div class="related-nav__content">
+                        <div class="text-xl fw-600">Prev</div>
+                        <p class="text-dark mt-8">Gaming Platform</p>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-auto col-6 d-flex justify-end">
+                    <a data-barba href="ilife.html" class="related-nav__item -prev text-right decoration-none">
+                      <div class="related-nav__content">
+                        <div class="text-xl fw-600">Next</div>
+                        <p class="text-dark mt-8">I-Life</p>
+                      </div>
+                      <div class="related-nav__arrow">
+                        <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <!-- footer -->
+        <div class="svg-shape">
+          <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+          </svg>
+        </div>
+        <footer class="footer -type-1 bg-dark-1">
+          <div class="container bg-dark-1">
+            <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+              <div class="col-md-auto">
+                <div class="footer__right text-white">
+                  <span class="footer__copyright text-white">
+                    Copyright © 2023 Yiping Lee
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-auto">
+                <div class="footer__right">
+                  <div class="footer__socials socials sm:justify-center">
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- End of footer -->
+
+
+      </div>
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

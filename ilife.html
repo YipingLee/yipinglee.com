@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Yiping Lee's Portfolio</title>
+  <meta name="description" content="Yiping Lee (Phoebe) is a UI/UX designer who is passionate about solving problems through compelling design solutions.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">Home</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index.html#projects">Projects</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about.html">About</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2023 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="md:d-none ml-30">
+                    <a href="login.html" class="button -sm -green text-white">Sign in</a>
+                  </div>
+                  -->
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      Close
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">I-Life Website Redesign</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">I-LIFE is a non-profit organization that helps people aged 18-25 who lack government support and struggle in life.
+                    They need a new official website to create an outstanding image for the organization and establish links between donors and the people they are helping.
+                    The old website made it difficult for users to find the information they needed, and the old website was based on Wix, so it is hard to do SEO to let people easily find them.</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Role</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>UI/UX designer and  UX researcher</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Device</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Mobile and desktop</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Tools</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma, Illustrator, Photoshop, Zeplin and WordPress</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Published</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>June 2022</p>
+                    </div>
+                  </div>
+                  <div class="col-auto mt-16">
+                    <a href="https://i-life.org.tw/" class="button -md -accent -uppercase text-white">View Website</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/i_life/ilife.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Project Goal</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">Increase potential donors</li>
+                    <li class="">Deepen the connections between donors and I-Life</li>
+                    <li class="">Increase website's exposure</li>
+                    <li class="">Understanding what motives will make people donate, and what image I-LIFE present will make them resonate to know more</li>
+                    <li class="">Make users feel more involved when they donate</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Pain Point</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">Information on the website is not clear, so potential donors cannot find the information they are seeking easily</li>
+                    <li class="">The current website lack of case sharing, so users cannot understand why they need help and develop empathy</li>
+                    <li class="">The current website cannot Increase website's exposure</li>
+                    <li class="">I-Life does not have people who know how to operate the website, so they cannot maintain, increase content and functions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Key Challenge or Constraint</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">Increase donations </li>
+                    <li class="">Helping people understand why adults may still need assistance</li>
+                    <li class="">Features are limited as this website will be built on WordPress</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Solution</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">Information on the website is not clear, so potential donors cannot find the information they are seeking easily</li>
+                    <li class="">The current website lack of case sharing, so users cannot understand why they need help and develop empathy</li>
+                    <li class="">The current website cannot Increase website's exposure</li>
+                    <li class="">I-Life does not have people who know how to operate the website, so they cannot maintain, increase content and functions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Double Diamond Model</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <img class="initial-img" src="img/projects/i_life/double_diamond_model.png" alt="image">
+                </div>
+              </div>
+            </div>
+
+            <!--
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">04. JQuery Power</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p>Stet clita bergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, quia. </p>
+                </div>
+              </div>
+            </div>
+            -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Problem</span>
+                </div>
+                <h2 class="sectionHeading__title">Stakeholder Interview</h2>
+                <p>The website needs make donors feels resonate with this issue. Find the main concept based on the interview to build the website.</p>
+              </div>
+            </div>
+
+            <div class="pt-60"></div>
+
+            <div calss="py-50 px-64">
+              <img class="initial-img" src="img/projects/i_life/quote_ceo.png" alt="image">
+            </div>
+
+            <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-red-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/staff_1.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Ming Yang - Co-founder & CEO</h4>
+                    <p class="mt-12">I hope that users will be able to see and understand the emotions of heaviness and acceptance. I also hope that they will be moved emotionally after browsing the website.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-green-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/staff_2.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Meryl Yang - Brand and Resource Development</h4>
+                    <p class="mt-12">Sharing adolescent psychological issues and mass communication.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/staff_1.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Ming Yang - Co-founder & CEO</h4>
+                    <p class="mt-12">Currently, donors are willing to donate because they feel moved by the stories I-Life shares in the offline activities.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/staff_1.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Ming Yang - Co-founder & CEO</h4>
+                    <p class="mt-12">This issue is resonate to everyone.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Problem-->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Discover -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Discover</span>
+                </div>
+                <h2 class="sectionHeading__title">Users Interview</h2>
+                <p>Know what will make user want to donate and how they donate through depth interviews.</p>
+                <ul class="ul-list y-gap-16 layout-pt-xxs text-left">
+                  <li class="">How users assess the credibility of donating organizations</li>
+                  <li class="">What reasons will make users donate and how they donate</li>
+                  <li class="">What donation experience will make them feels satisfaction/dissatisfaction</li>
+                  <li class="">What reply or information users want to get after donating</li>
+                </ul>
+              </div>
+            </div>
+            <div class="layout-pt-md"></div>
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Usability Testing</h2>
+                <p>Ask users browsing the current website to know what is the image I-Life present and the user experience of the donation process.</p>
+                <ul class="ul-list y-gap-16 layout-pt-xxs text-left">
+                  <li class="">Ask users to browse the current website to understand the image I-LIFE presenting</li>
+                  <li class="">Ask users how to donate on the current website</li>
+                  <li class="">Ask users which content caught their interest</li>
+                </ul>
+                <section class="layout-pt-xs layout-pb-lg">
+                  <div class="row y-gap-32">      
+                    <div class="col-lg-4 col-md-6">
+                      <div class="ratio ratio-37:40">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/testing_1.jpeg" alt="image">
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="ratio ratio-37:40">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/testing_2.jpeg" alt="image">
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                      <div class="ratio ratio-37:40">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/testing_3.jpeg" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Discover-->
+
+      <div class="layout-pt-md"></div>
+        
+
+      <!-- Define -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-8">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Define</span>
+                </div>
+                <h2 class="sectionHeading__title">Create Persona - Point of View</h2>
+                <p>Develop the point of view based on user research, and define what is the important issue for us
+                  We classified sticky notes into groups and named them, find out what are the hidden common messages of the sentences through ideate, to avoid superficial classified.</p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <img class="initial-img" src="img/projects/i_life/pov_1.png" alt="image">
+            </div>
+            <div class="col-12">
+              <img class="initial-img" src="img/projects/i_life/pov_2.png" alt="image">
+            </div>
+            <div class="col-12">
+              <img class="initial-img" src="img/projects/i_life/pov_3.png" alt="image">
+            </div>
+
+            <!--
+            <section class="layout-pt-xs layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="sectionSlider relative js-sectionSlider overflow-hidden" data-cursor-slider="slider" data-gap="48" data-slider-col="base-1 lg-1 md-1 sm-1" data-center data-loop>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_1.png" alt="Image">
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_2.png" alt="Image">
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_3.png" alt="Image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="nav -slider -absolute-center z-5 px-30 justify-between md:justify-center md:pt-60 sm:pt-40">
+                        <div data-cursor class="nav__item -left js-prev">
+                          <i class="icon" data-feather="arrow-left"></i>
+                        </div>
+                        <div data-cursor class="nav__item -right ml-20 js-next">
+                          <i class="icon" data-feather="arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            -->
+            <!--
+            <section data-anim="slide-up delay-1" class="layout-pt-sm layout-pb-sm">
+              <div class="sectionSlider overflow-hidden js-sectionSlider" data-cursor-slider="slider" data-gap="60" data-slider-col="base-2 lg-2 md-2 sm-1" data-center data-loop>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_1.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_2.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_3.png"image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            -->
+            
+            <section class="layout-pt-sm layout-pb-md">
+              <div class="row y-gap-32">
+                <div class="col-lg-4 col-md-6">
+                  <div class="sectionHeading text-left">
+                    <h2 class="sectionHeading__title">Persona</h2>
+                  </div>
+                  <p class="sectionHeading text-left">Summarize the common behaviors of the five interviewees as the user</p>
+                </div>
+                <div class="col-lg-8">
+                  <img class="initial-img" src="img/projects/i_life/persona.png" alt="image">
+                </div>
+              </div>  
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- End of Define-->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Develop -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Develop</span>
+                </div>
+                <h2 class="sectionHeading__title">Design Insight</h2>
+              </div>
+            </div>
+
+            <div class="pt-60"></div>
+
+            <div calss="py-50 px-64">
+              <img class="initial-img" src="img/projects/i_life/quote_user.png" alt="image">
+            </div>
+
+            <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-red-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/user_2.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Mrs. Kao - Designer</h4>
+                    <p class="mt-12">I do not like to see all those numbers about how many people they helped, I want to see how I-Life changed and helped their life when I browse the website.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-green-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/user_2.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Mrs. Kao - Designer</h4>
+                    <p class="mt-12">I do not like some associations take advantage of the people they are helping, they can present their stories or fake name, but I do not like them posting their real identity.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/user_3.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Ms. Kuo - Nanny</h4>
+                    <p class="mt-12">There have share cases, I want to check out their feedback and stories to make sure it is real.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="d-flex sm:direction-column items-center">
+                  <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                    <img src="img/projects/i_life/user_1.png">
+                  </div>
+                  <div class="sm:mt-20 text-left">
+                    <h4 class="text-xl fw-600 lh-1">Mrs. Hu - Civil Servant</h4>
+                    <p class="mt-12">Care about what will change in their life after donated.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">HMW</h2>
+                <p>Disassemble the point of view in different ways, and use "how can we..." to convert it into a question that helps to think.</p>
+              </div>
+            </div>
+            <div class="col-12 layout-pt-xs">
+              <img class="initial-img" src="img/projects/i_life/hmw.png" alt="image">
+            </div>
+            
+            <div class="layout-pt-md"></div>
+
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Find Insight of the Website</h2>
+                <p>Find insights based on user interview results, and we vote on the most feasible solutions.</p>
+              </div>
+            </div>
+            <div class="col-12 layout-pt-xs">
+              <img class="initial-img" src="img/projects/i_life/website_insight.png" alt="image">
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End of Develop-->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Solution -->
+      <!--
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Solution</span>
+                </div>
+                <h2 class="sectionHeading__title">Refined Solution</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-pt-md"></div>
+
+        <div class="container">
+          <div class="page-masthead__content js-pin-container">
+            <div class="row y-gap-40 justify-between">
+              <div class="col-xl-6 col-lg-6">
+                <div class="gallery y-gap-32">
+                  <a data-barba href="img/projects/i_life/1.jpg" class="gallery__item js-gallery" data-gallery="gallery1">
+                    <div class="ratio ratio-57:60">
+                      <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/1.jpg" alt="project image">
+                    </div>
+                    <div class="gallery__button">
+                      <i class="icon" data-feather="plus"></i>
+                    </div>
+                  </a>
+                  
+                  <a data-barba href="img/projects/i_life/2.jpg" class="gallery__item js-gallery" data-gallery="gallery1">
+                    <div class="ratio ratio-57:60">
+                      <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/2.jpg" alt="project image">
+                    </div>
+                    <div class="gallery__button">
+                      <i class="icon" data-feather="plus"></i>
+                    </div>
+                  </a>
+                  <a data-barba href="img/projects/i_life/3.jpg" class="gallery__item js-gallery" data-gallery="gallery1">
+                    <div class="ratio ratio-57:60">
+                      <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/3.jpg" alt="project image">
+                    </div>
+                    <div class="gallery__button">
+                      <i class="icon" data-feather="plus"></i>
+                    </div>
+                  </a>
+                  
+                </div>
+              </div>
+
+              <div class="col-xl-5 col-lg-5 col-md-10">
+                <div class="text-left pb-60 md:pb-0 js-pin-content">
+                  <h2 class="sectionHeading__title">Refined Solution</h2>
+                  <ul class="ul-list y-gap-16 layout-pt-xxs text-left">
+                    <li class="">Use storytelling layout on the front page to explain why they are adults but need help</li>
+                    <li class="">Add case sharing section and prioritization it for potential donors to understand how I-Life help them</li>
+                    <li class="">Add material donation page, so that donors are not limited to donating money but also donating items</li>
+                    <li class="">Add blog page to let users know more about their stories and deepen the connection</li>
+                    <li class="">Add media report page to increase the credibility of I-Life</li>
+                    <li class="">Add news page to let users understand the latest news of I-Life</li>
+                  </ul>
+                  <button class="button -md -accent -uppercase text-white mt-32">View Website</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      -->
+      <!-- end of solution-->
+
+      <!-- refined solution -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Solution</span>
+                </div>
+                <h2 class="sectionHeading__title">Refined Solution</h2>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32 justify-between items-center">
+                      <div class="col-lg-4 order-lg-1 order-2">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">Storytelling</h2>
+                        </div>
+                        <p>Use storytelling layout to explain why they are adults but need help.</p>
+                      </div>
+                      <div class="col-lg-8 order-lg-2 order-1">
+                        <img class="initial-img" src="img/projects/i_life/storytelling_before.png" alt="image">
+                        <div class="layout-pt-xs"></div>
+                        <img class="initial-img" src="img/projects/i_life/storytelling_after.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32 items-center">
+                      <div class="col-lg-8">
+                        <img class="initial-img" src="img/projects/i_life/how_we_do.png" alt="image">
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">How We Do</h2>
+                        </div>
+                        <p>Add case sharing and plan flows section and prioritization it for potential donors to understand how I-Life help them.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32 justify-between items-center">
+                      <div class="col-xl-5 col-lg-6 order-lg-1 order-2">
+                        <div class="sectionHeading ">
+                          <h2 class="sectionHeading__title">Material Donation Page</h2>
+                        </div>
+                        <p>Add material donation page, so that donors are not limited to donating money but also donating items.</p>
+                      </div>
+                      <div class="col-xl-6 col-lg-6 order-lg-2 order-1">
+                        <img src="img/projects/i_life/material_donation.png" alt="image" class="initial-img">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32 items-center">
+                      <div class="col-lg-8">
+                        <img class="initial-img" src="img/projects/i_life/blog.png" alt="image">
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">Blog</h2>
+                        </div>
+                        <p>Add blog page to let users know more about their stories and deepen the connection.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32 justify-between items-center">
+                      <div class="col-lg-4 order-lg-1 order-2">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">News and Media</h2>
+                        </div>
+                        <p>Add a news and media report page to increase the credibility of I-Life and provide users with the latest news about them.</p>
+                      </div>
+                      <div class="col-lg-8 order-lg-2 order-1">
+                        <img class="initial-img" src="img/projects/i_life/media.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- mobile -->
+                <h2 class="sectionHeading__title">Mobile</h2>
+                <section class="layout-pt-xs layout-pb-sm">
+
+                  <div data-anim="slide-up delay-2" class="row justify-center sm:pt-40" data-cursor-slider="slider">
+                    <div class="col-xl-4">
+                      <div class="sectionSlider sm:px-16 js-sectionSlider" data-cursor-slider="slider" data-gap="150" data-slider-col="base-1 lg-1 md-1 sm-1" data-pagination data-loop>
+                        <div class="phone-slider-image__bg">
+                          <img src="img/iphone-12-pro-max--pacific-blue.png" alt="phone image">
+                        </div>
+
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_1.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_2.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_3.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_4.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_5.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_6.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_7.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_8.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_9.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_10.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_11.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_12.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_13.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_14.png" alt="phone image">
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="phone-slider-image">
+                              <img src="img/projects/i_life/mobile_15.png" alt="phone image">
+                            </div>
+                          </div> 
+                        </div>
+                        <div class="pagination -slider mt-48 js-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- end of mobile -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of refined solution -->
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="video-platform.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">Prev</div>
+                      <p class="text-dark mt-8">Streaming Service Platform Redesign</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="messaging-service.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">Next</div>
+                      <p class="text-dark mt-8">Instant Messaging Service</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2023 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

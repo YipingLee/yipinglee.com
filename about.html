@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Yiping Lee's Portfolio</title>
+  <meta name="description" content="Yiping Lee (Phoebe) is a UI/UX designer who is passionate about solving problems through compelling design solutions.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content">
+
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">Home</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index.html#projects">Projects</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about.html">About</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2023 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="md:d-none ml-30">
+                    <a href="login.html" class="button -sm -green text-white">Sign in</a>
+                  </div>
+                  -->
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      Close
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- hi -->
+      <div class="content-wrapper  js-content-wrapper ">
+        <section class="layout-pt-sm layout-pb-lg">
+          <div data-anim-wrap class="container">
+            <div class="row y-gap-40 justify-between items-center">
+              <div data-anim-child="slide-up delay-2" class="col-xl-4 col-lg-5 col-md-6 order-lg-1 order-2">
+                <div class="sectionHeading ">
+                  <h2 class="sectionHeading__title">I'm<br> Yiping (Phoebe)</h2>
+                </div>
+                <div class="mt-30">
+                  <p>My passion is solving problems through compelling design solutions, and I’ve always admired how thoughtful design has the power to change our world, whether it’s through simplifying one interaction or giving users an opportunity to view things through a new angle.</p>
+                  <!--<a href="about-1.html" class="button -md -accent rounded-8 text-white mt-30">Discover More</a>-->
+                </div>
+              </div>
+              <div data-anim-child="scale delay-1" class="col-xl-7 col-lg-7 col-md-5 order-lg-2 order-1">
+                <img class="initial-img" src="img/hi.gif" alt="image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of hi -->
+
+        <!-- what i do -->
+        <section class="layout-pt-lg layout-pb-lg section-bg-color">
+          <div class="section-bg-color__item -full rounded-0 bg-light-4"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-xl-6 col-lg-7">
+                <div class="sectionHeading ">
+                  <h2 class="sectionHeading__title">What I do</h2>
+                </div>
+              </div>
+            </div>
+
+            <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+              <div data-anim-child="slide-up delay-1" class="col-lg-4 col-md-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_1.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">UI/UX Design</h4>
+                    <p class="mt-10">Sufficient frontend and backend knowledge enables me to take ownership of projects and complete designs independently.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-anim-child="slide-up delay-2" class="col-lg-4 col-sm-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_2.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">Visual Identity</h4>
+                    <p class="mt-10">With clear understanding of design guidelines, I can both create guidelines or work within existing brand styles and bring out their creative identity.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-anim-child="slide-up delay-3" class="col-lg-4 col-sm-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_3.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">Marketing Materials</h4>
+                    <p class="mt-10">Design and deliver a variety of creatives, including but not limited to: flyers, brochures, banners, product pages, etc.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- end of what i do -->
+
+        <!-- footer -->
+        <div class="svg-shape">
+          <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+          </svg>
+        </div>
+        <footer class="footer -type-1 bg-dark-1">
+          <div class="container bg-dark-1">
+            <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+              <div class="col-md-auto">
+                <div class="footer__right text-white">
+                  <span class="footer__copyright text-white">
+                    Copyright © 2023 Yiping Lee
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-auto">
+                <div class="footer__right">
+                  <div class="footer__socials socials sm:justify-center">
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- End of footer -->
+
+      </div>
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
