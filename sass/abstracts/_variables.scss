@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: 400;
+  src: url('../fonts/font/Sofia Pro Regular Az.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: 500;
+  src: url('../fonts/font/Sofia Pro Medium Az.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: 600;
+  src: url('../fonts/font/Sofia Pro Semi Bold Az.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: 700;
+  src: url('../fonts/font/Sofia Pro Bold Az.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  font-weight: 800;
+  src: url('../fonts/font/Sofia Pro Black Az.woff2') format('woff2');
+}
+
+$font-size: 16px;
+
+:root {
+  --text-xs:   #{rem(11px)};
+  --text-sm:   #{rem(13px)};
+  --text-base: #{rem(14px)};
+  --text-lg:   #{rem(15px)};
+  --text-xl:   #{rem(18px)};
+  --text-2xl:  #{rem(20px)};
+  --text-3xl:  #{rem(40px)};
+  --text-4xl:  #{rem(60px)};
+  --text-5xl:  #{rem(85px)};
+
+  --text-25:  #{rem(25px)};
+  --text-22:  #{rem(22px)};
+  --text-32:  #{rem(32px)};
+  --text-50:  #{rem(50px)};
+  --text-26:  #{rem(26px)};
+  --text-16:  #{rem(16px)};
+  --text-30:  #{rem(30px)};
+}
+
+:root {
+  --preloader-image: url('../img/general/logo-light.svg');
+}
+
+$breakpoints: (
+  xxs: 420px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1350px
+);
+
+// Color variables
+:root {
+  --accent-color: #0044EB;
+  --light-accent-color: #E5ECFD;
+  --dark-accent-color: #3B59D4;
+
+  --teal-color: #39C1FF;
+
+  --light-purple-color: #F0EFFF;
+  --purple-color: #615EF6;
+  --purple-2-color: #6B25C5;
+  --purple-3-color: #5A13B5;
+  
+  --darker-blue-color: #0E1376;
+  --dark-blue-color: #1732A4;
+  --blue-color: #867BF2;
+  --light-blue-color: #E7E5FC;
+  --blue-2-color: #4C7FF1;
+  
+  --red-2-color: #E13F52;
+  --red-color: #FF0071;
+  --red-bright-color: #FD3600;
+  --light-red-color: #FFEDF5;
+
+  --light-green-color-full: #26D9DA;
+  --green-color: #33C89A;
+  --dark-green-color: #008181;
+  --light-green-color: #D3F8F8;
+  
+  --yellow-color: #EC9B00;
+  --light-yellow-color: #FFF3DC;
+  
+  --light-orange-color: #FFEDDF;
+  --orange-color: #F86B45;
+  --orange-2-color: #FE754F;
+  --orange-3-color: #EB6245;
+
+  --bg-light-1: #f5f6f8;
+  --bg-light-2: #FAFAFE;
+  --bg-light-3: #EEEEEE;
+  --bg-light-4: #F5F7FE;
+  --bg-light-5: #F7F9FC;
+  --bg-light-6: #F5F4F2;
+
+  --bg-dark-1: #1A3454;
+  --bg-dark-2: #01213A;
+  --bg-dark-3: #312950;
+  --bg-dark-4: #0E1376;
+  --bg-dark-5: #281D60;
+  --bg-dark-6: #322867;
+  --bg-dark-7: #2D4F93;
+  --bg-dark-8: #21286A;
+  --bg-dark-9: #11243E;
+  --bg-dark-10: #1D1E6D;
+  --bg-dark-11: #17262F;
+  --bg-dark-12: #1D144E;
+  --bg-dark-13: #3E3470;
+
+  --text-dark-1: #1A3454;
+  --font-light: rgba(white, 0.6);
+  --font-dark: #404046;
+}
+
+:root {
+  --font-primary: "Sofia Pro", sans-serif;
+  --font-secondary: "Sofia Pro", sans-serif;
+
+  --button-border-radius: 200px;
+}

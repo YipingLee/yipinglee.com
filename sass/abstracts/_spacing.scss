@@ -1,0 +1,373 @@
+$_sizesBreaks: lg, md, sm;
+
+$sizes:
+  // 0, 4, 8, 10, 12, 16, 20, 24, 28, 30, 32, 34, 36, 40, 48, 50, 56, 60, 64, 72, 80, 100, 112, 120, 160
+  0, 4, 8, 10, 12, 16, 20, 24, 30, 32, 34, 40, 48, 50, 60, 64, 72, 80, 100, 120
+;
+
+@each $size in $sizes {
+  .py-#{$size} {
+    padding-top: #{$size / 16}rem !important;
+    padding-bottom: #{$size / 16}rem !important;
+  }
+
+  .px-#{$size} {
+    padding-left: #{$size / 16}rem !important;
+    padding-right: #{$size / 16}rem !important;
+  }
+
+  .pt-#{$size} { padding-top: #{$size / 16}rem !important; }
+  .pb-#{$size} { padding-bottom: #{$size / 16}rem !important ; }
+  .pl-#{$size} { padding-left: #{$size / 16}rem !important ; }
+  .pr-#{$size} { padding-right: #{$size / 16}rem !important; }
+  .mt-#{$size} { margin-top: #{$size / 16}rem !important ; }
+  .mb-#{$size} { margin-bottom: #{$size / 16}rem !important; }
+  .ml-#{$size} { margin-left: #{$size / 16}rem !important; }
+  .mr-#{$size} { margin-right: #{$size / 16}rem !important ; }
+}
+
+
+@include media-below(md) {
+  .md\:mt-112 {
+    margin-top: 112px;
+  }
+}
+
+.px-160 {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.pl-56 {
+  padding-left: 56px;
+}
+
+.mt-56 {
+  margin-top: 56px;
+}
+
+.py-36 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.px-28 {
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    @each $size in $sizes {
+      .#{$break}\:py-#{$size} {
+        padding-top: #{$size / 16}rem !important;
+        padding-bottom: #{$size / 16}rem !important;
+      }
+    
+      .#{$break}\:px-#{$size} {
+        padding-left: #{$size / 16}rem !important;
+        padding-right: #{$size / 16}rem !important;
+      }
+    
+      .#{$break}\:pt-#{$size} { padding-top: #{$size / 16}rem !important; }
+      .#{$break}\:pb-#{$size} { padding-bottom: #{$size / 16}rem !important; }
+      .#{$break}\:pl-#{$size} { padding-left: #{$size / 16}rem !important; }
+      .#{$break}\:pr-#{$size} { padding-right: #{$size / 16}rem !important; }
+      .#{$break}\:mt-#{$size} { margin-top: #{$size / 16}rem !important; }
+      .#{$break}\:mb-#{$size} { margin-bottom: #{$size / 16}rem !important; }
+      .#{$break}\:ml-#{$size} { margin-left: #{$size / 16}rem !important; }
+      .#{$break}\:mr-#{$size} { margin-right: #{$size / 16}rem !important; }
+    }
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@each $break in $_sizesBreaks {
+  .#{$break}\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.w-1\/1 { width: 100% !important; }
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    .#{$break}\:w-1\/1 { width: 100%; }
+  }
+}
+
+
+.h {
+  &-sm { height: rem(520px); }
+  &-md { height: rem(580px); }
+  &-lg { height: rem(680px); }
+  
+	&-70vh  { height: 70vh; }
+	&-80vh  { height: 80vh; }
+	&-90vh  { height: 90vh; }
+  &-100vh { height: 100vh; }
+  
+  &-unset { height: unset; }
+  &-1\/1 { height: 100%; }
+}
+
+@include media-below(md) {
+  .md\:h {
+    &-unset { height: unset; }
+    &-70vh  { height: 70vh; }
+    &-80vh  { height: 80vh; }
+    &-90vh  { height: 90vh; }
+    &-100vh { height: 100vh; }
+  }
+}
+
+@include media-below(sm) {
+  .sm\:h {
+    &-md { height: rem(580px); }
+  }
+}
+
+
+.text {
+  &-center { text-align: center; }
+  &-right { text-align: right; }
+  &-left { text-align: left; }
+}
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    .#{$break}\:text {
+      &-center { text-align: center !important; }
+      &-right { text-align: right !important; }
+      &-left { text-align: left !important; }
+    }
+  }
+}
+
+
+.justify-start   { justify-content: flex-start !important; }
+.justify-end     { justify-content: flex-end !important; }
+.justify-center  { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.items-start     { align-items: flex-start !important; }
+.items-end       { align-items: flex-end !important; }
+.items-center    { align-items: center !important; }
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    .#{$break}\:justify-start   { justify-content: flex-start !important; }
+    .#{$break}\:justify-end     { justify-content: flex-end !important; }
+    .#{$break}\:justify-center  { justify-content: center !important; }
+    .#{$break}\:justify-between { justify-content: space-between !important; }
+    .#{$break}\:items-start     { align-items: flex-start !important; }
+    .#{$break}\:items-end       { align-items: flex-end !important; }
+    .#{$break}\:items-center    { align-items: center !important; }
+  }
+}
+
+
+.d-none         { display: none !important; }
+.d-flex         { display: flex !important; }
+.d-block        { display: block !important; }
+.d-inline-block { display: inline-block !important; }
+
+$_displays: none, inline-block, block, flex;
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    @each $value in $_displays {
+      .#{$break}\:d-#{$value} { display: $value !important; }
+    }
+  }
+}
+
+
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+
+@each $break in $_sizesBreaks {
+  @include media-below($break) {
+    .#{$break}\:order-1 { order: 1; }
+    .#{$break}\:order-2 { order: 2; }
+  }
+}
+
+
+.layout-pt {
+	&-xs  { padding-top: rem(40px); }
+	&-sm  { padding-top: rem(60px); }
+	&-md  { padding-top: rem(100px); }
+  &-lg  { padding-top: rem(120px); }
+  &-xl  { padding-top: rem(140px); }
+  &-2xl { padding-top: rem(180px); }
+
+  @include media-below(md) {
+    &-md { padding-top: rem(60px); }
+    &-lg { padding-top: rem(100px); }
+    &-xl { padding-top: rem(120px); }
+    &-2xl { padding-top: rem(160px); }
+  }
+
+  @include media-below(sm) {
+    &-sm { padding-top: rem(50px); }
+    &-md { padding-top: rem(60px); }
+    &-lg { padding-top: rem(100px); }
+    &-xl { padding-top: rem(120px); }
+    &-2xl { padding-top: rem(130px); }
+  }
+}
+
+.layout-pb {
+	&-xs  { padding-bottom: rem(40px); }
+	&-sm  { padding-bottom: rem(60px); }
+	&-md  { padding-bottom: rem(100px); }
+  &-lg  { padding-bottom: rem(120px); }
+  &-xl  { padding-bottom: rem(140px); }
+  &-2xl { padding-bottom: rem(180px); }
+
+  @include media-below(md) {
+    &-md { padding-bottom: rem(60px); }
+    &-lg { padding-bottom: rem(100px); }
+    &-xl { padding-bottom: rem(120px); }
+    &-2xl { padding-bottom: rem(160px); }
+  }
+
+  @include media-below(sm) {
+    &-sm { padding-bottom: rem(50px); }
+    &-md { padding-bottom: rem(60px); }
+    &-lg { padding-bottom: rem(100px); }
+    &-xl { padding-bottom: rem(120px); }
+    &-2xl { padding-bottom: rem(130px); }
+  }
+}
+
+
+$x-gap-sizes: 4, 10, 16, 18, 20, 24, 32, 40, 48, 60, 64, 72, 100, 120;
+$y-gap-sizes: 4, 10, 16, 18, 20, 24, 32, 40, 48, 60, 64, 72, 100, 120;
+
+.x-gap {
+  &-80 {
+    margin-left: -#{80 / 32}rem;
+    margin-right: -#{80 / 32}rem;
+  
+    > * {
+      padding-left: #{80 / 32}rem;
+      padding-right: #{80 / 32}rem;
+    }
+  }
+}
+
+@each $gap in $x-gap-sizes {
+  .x-gap {
+    &-#{$gap} {
+      margin-left: -#{$gap / 32}rem;
+      margin-right: -#{$gap / 32}rem;
+    
+      > * {
+        padding-left: #{$gap / 32}rem;
+        padding-right: #{$gap / 32}rem;
+      }
+    }
+  }
+}
+
+@each $gap in $y-gap-sizes {
+  .y-gap {
+    &-#{$gap} {
+      margin-top: -#{$gap / 32}rem;
+      margin-bottom: -#{$gap / 32}rem;
+    
+      > * {
+        padding-top: #{$gap / 32}rem;
+        padding-bottom: #{$gap / 32}rem;
+      }
+    }
+  }
+}
+
+@include media-below(md) {
+  @each $gap in $x-gap-sizes {
+    .md\:x-gap {
+      &-#{$gap} {
+        margin-left: -#{$gap / 32}rem;
+        margin-right: -#{$gap / 32}rem;
+      
+        > * {
+          padding-left: #{$gap / 32}rem;
+          padding-right: #{$gap / 32}rem;
+        }
+      }
+    }
+  }
+  
+  @each $gap in $y-gap-sizes {
+    .md\:y-gap {
+      &-#{$gap} {
+        margin-top: -#{$gap / 32}rem;
+        margin-bottom: -#{$gap / 32}rem;
+      
+        > * {
+          padding-top: #{$gap / 32}rem;
+          padding-bottom: #{$gap / 32}rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-below(sm) {
+  @each $gap in $x-gap-sizes {
+    .sm\:x-gap {
+      &-#{$gap} {
+        margin-left: -#{$gap / 32}rem;
+        margin-right: -#{$gap / 32}rem;
+      
+        > * {
+          padding-left: #{$gap / 32}rem;
+          padding-right: #{$gap / 32}rem;
+        }
+      }
+    }
+  }
+  
+  @each $gap in $y-gap-sizes {
+    .sm\:y-gap {
+      &-#{$gap} {
+        margin-top: -#{$gap / 32}rem;
+        margin-bottom: -#{$gap / 32}rem;
+      
+        > * {
+          padding-top: #{$gap / 32}rem;
+          padding-bottom: #{$gap / 32}rem;
+        }
+      }
+    }
+  }
+}
+
+.mt--220 {
+  margin-top: rem(-220px);
+}
+
+.mt--80 {
+  margin-top: rem(-80px);
+}
+
+.mb-minus-170 {
+  margin-bottom: -170px;
+}
+
+.mb-minus-lg {
+  margin-bottom: rem(-60px);
+}
+
+.mt-minus-xl {
+  margin-top: rem(-240px);
+}

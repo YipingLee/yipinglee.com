@@ -1,0 +1,138 @@
+// @media only screen and (max-width: 991px) {}
+
+@mixin media-above($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+@mixin media-below($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (max-width: ($breakpoint-value - 1)) {
+    @content;
+  }
+}
+
+@mixin media-between($lower, $upper) {
+  $lower-breakpoint: map-get($breakpoints, $lower);
+  $upper-breakpoint: map-get($breakpoints, $upper);
+
+  @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+    @content;
+  }
+}
+
+
+
+@function rem($size, $base: $font-size) {
+  @if (type-of($size) == number) {
+    @if (unit($size) != "px") {
+      @error "`#{$size}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$size}` needs to be a number.";
+  }
+
+  @if (type-of($base) == number) {
+    @if (unit($base) != "px") {
+      @error "`#{$base}` needs to be a pixel value.";
+    }
+  } @else {
+    @error "`#{$base}` needs to be a number.";
+  }
+
+  @return ($size / $base) * 1rem;
+}
+
+
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin size($width, $height: $width) {
+  width: #{$width};
+  height: #{$height};
+}
+
+@mixin mfont($size: null, $line_height: null, $weight: null, $transform: null, $spacing: null) {
+	font-size: #{$size};
+	line-height: #{$line_height};
+	font-weight: #{$weight};
+	text-transform: #{$transform};
+	letter-spacing: #{$spacing};
+}
+
+
+
+.ratio {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    width: 100%;
+    content: "";
+  }
+}
+
+$aspect-ratios: (
+  (1:1),
+  (2:1),
+  (2:3),
+  (3:2),
+  (3:4),
+  (4:3),
+  (5:4),
+  (8:5),
+  (48:50),
+  (62:60),
+  (64:55),
+  (63:60),
+  (93:53),
+  (41:35),
+  (41:45),
+  (42:50),
+  (55:40),
+  (27:30),
+  (27:33),
+  (37:40),
+  (57:60),
+  (57:39),
+  (37:25),
+  (37:50),
+  (97:55),
+  (77:60),
+  (77:50),
+  (129:112),
+  (16:9)
+) !default;
+
+//
+// Generate a series of ratio classes to be used like so:
+//
+// @example
+//   <div class="ratio ratio-16:9">
+//
+//
+@each $ratio in $aspect-ratios {
+  @each $antecedent, $consequent in $ratio {
+    @if (type-of($antecedent) != number) {
+      @error "`#{$antecedent}` needs to be a number."
+    }
+
+    @if (type-of($consequent) != number) {
+      @error "`#{$consequent}` needs to be a number."
+    }
+
+    .ratio-#{$antecedent}\:#{$consequent}::before {
+      padding-bottom: ($consequent/$antecedent) * 100%;
+    }
+  }
+}
