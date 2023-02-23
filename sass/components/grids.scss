@@ -1,0 +1,173 @@
+.filter-button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  button {
+    padding: 10px;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+
+    &:hover {
+      color: var(--accent-color) !important;
+    }
+  }
+
+  button.btn-active {
+    color: black;
+    text-decoration: underline;
+  }
+}
+
+.masonry__item {
+  .portfolioCard {
+  }
+
+  .portfolioCard__img,
+  .portfolioCard__img__inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.masonry {
+  .masonry__item.-no-ratio > .ratio  { padding-bottom: unset !important; }
+  .masonry__item > .ratio       { padding-bottom: 100%; }
+  .masonry__item.-r-120 > .ratio  { padding-bottom: 120%; }
+  .masonry__item.-long > .ratio { padding-bottom: 200%; }
+  .masonry__item.-big > .ratio  { padding-bottom: 100%; }
+  .masonry__item.-wide > .ratio { padding-bottom: 50%; }
+}
+
+.masonry.-col {
+  &-4 {
+    .masonry__sizer     { width: 25%; }
+    .masonry__item      { width: 25%; }
+    .masonry__item.-long { width: 25%; }
+    .masonry__item.-big  { width: 50%; }
+    .masonry__item.-wide { width: 50%; }
+
+    @include media-below(md) {
+      .masonry__sizer     { width: 33.33333%; }
+      .masonry__item      { width: 33.33333%; }
+      .masonry__item.-long { width: 33.33333%; }
+      .masonry__item.-big  { width: 66.66666%; }
+      .masonry__item.-wide { width: 66.66666%; }
+    }
+
+    @include media-below(sm) {
+      .masonry__sizer     { width: 50%; }
+      .masonry__item      { width: 50%; }
+      .masonry__item.-long { width: 50%; }
+      .masonry__item.-big  { width: 100%; }
+      .masonry__item.-wide { width: 100%; }
+    }
+
+    @include media-below(xs) {
+      .masonry__sizer     { width: 100%; }
+      .masonry__item      { width: 100%; }
+      .masonry__item.-long { width: 100%; }
+      .masonry__item.-big  { width: 100%; }
+      .masonry__item.-wide { width: 100%; }
+    }
+  }
+
+  &-3 {
+    .masonry__sizer     { width: 33.33333%; }
+    .masonry__item      { width: 33.33333%; }
+    .masonry__item.-long { width: 33.33333%; }
+    .masonry__item.-big  { width: 66.66666%; }
+    .masonry__item.-wide { width: 66.66666%; }
+
+    @include media-below(sm) {
+      .masonry__sizer     { width: 50%; }
+      .masonry__item      { width: 50%; }
+      .masonry__item.-long { width: 50%; }
+      .masonry__item.-big  { width: 100%; }
+      .masonry__item.-wide { width: 100%; }
+    }
+
+    @include media-below(xs) {
+      .masonry__sizer     { width: 100%; }
+      .masonry__item      { width: 100%; }
+      .masonry__item.-long { width: 100%; }
+      .masonry__item.-big  { width: 100%; }
+      .masonry__item.-wide { width: 100%; }
+    }
+  }
+
+  &-2 {
+    .masonry__sizer     { width: 50%; }
+    .masonry__item      { width: 50%; }
+    .masonry__item.-long { width: 50%; }
+    .masonry__item.-big  { width: 100%; }
+    .masonry__item.-wide { width: 100%; }
+
+    @include media-below(xs) {
+      .masonry__sizer     { width: 100%; }
+      .masonry__item      { width: 100%; }
+      .masonry__item.-long { width: 100%; }
+      .masonry__item.-big  { width: 100%; }
+      .masonry__item.-wide { width: 100%; }
+    }
+  }
+}
+
+
+$_masonry__grid-gaps: 1, 2, 2.5, 3;
+
+@each $gap in $_masonry__grid-gaps {
+  .masonry.-gap-#{$gap * 16} {
+    margin-left: -#{$gap / 2}rem;
+    margin-right: -#{$gap / 2}rem;
+
+    .masonry__item {
+      padding: 0 #{$gap / 2}rem;
+      margin-bottom: #{$gap}rem;
+    }
+
+    .masonry__item.-no-ratio > .ratio  { padding-bottom: unset !important; }
+    .masonry__item > .ratio       { padding-bottom: 100%; }
+    .masonry__item.-r-120 > .ratio  { padding-bottom: 120%; }
+    .masonry__item.-long > .ratio { padding-bottom: calc(200% + #{$gap}rem); }
+    .masonry__item.-big > .ratio  { padding-bottom: 100%; }
+    .masonry__item.-wide > .ratio { padding-bottom: calc(50% - #{$gap / 2}rem); }
+  }
+}
+
+
+.masonry.-gap-fancy {
+  margin-left: rem(-115px);
+  margin-right: rem(-115px);
+
+  .masonry__item {
+    padding: 0 rem(115px);
+    margin-bottom: rem(90px);
+  }
+
+  @include media-below(lg) {
+    margin-left: rem(-80px);
+    margin-right: rem(-80px);
+
+    .masonry__item {
+      padding: 0 rem(80px);
+      margin-bottom: rem(80px);
+    }
+  }
+
+  @include media-below(md) {
+    margin-left: rem(-20px);
+    margin-right: rem(-20px);
+
+    .masonry__item {
+      padding: 0 rem(20px);
+      margin-bottom: rem(40px);
+    }
+  }
+}
+

@@ -1,0 +1,20 @@
+.clients {
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include media-below(md) {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @include media-below(sm) {
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}

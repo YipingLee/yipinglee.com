@@ -1,0 +1,45 @@
+.backButton {
+  z-index: 200;
+  position: absolute;
+  bottom: rem(105px);
+  right: rem(48px);
+  transition: all 0.2s $easeInOutQuart;
+
+  .nav__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(32px);
+    height: rem(32px);
+    border-radius: 100%;
+    border: 1px solid var(--accent-color);
+    transition: all 0.1s ease-out;
+
+    .icon {
+      position: relative;
+      color: var(--accent-color);
+      font-size: rem(30px);
+      transition: all 0.1s ease-out;
+    }
+
+    &.-left {
+      transform: rotate(90deg);
+
+      .icon {
+        left: rem(15px);
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      transform: scale(1.05) rotate(90deg);
+    }
+  }
+
+  // &.is-visible {
+  //   pointer-events: auto;
+  //   transform: none;
+  //   opacity: 1;
+  // }
+}

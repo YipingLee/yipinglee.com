@@ -1,0 +1,106 @@
+.mega {
+  cursor: auto;
+  z-index: 2000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: rem(40px) rem(20px);
+  padding-bottom: rem(20px);
+  display: flex;
+  width: rem(840px);
+  border-radius: rem(8px);
+  background-color: white;
+  border: 1px solid #EEEEEE;
+  box-shadow: 0px 25px 70px rgba(1, 33, 58, 0.07);
+  transition: all 0.25s $easeOutQuart;
+  opacity: 0;
+  pointer-events: none;
+  
+  @include media-between(md, lg) {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__menu {
+    width: 100%;
+    
+    .row {
+      width: 100%;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {}
+
+  &__list {
+    li {}
+
+    a {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      font-size: rem(14px);
+      padding: rem(13px) rem(20px) !important;
+      line-height: 1;
+      color: var(--font-dark) !important;
+      border-radius: rem(8px);
+      transition: all 0.2s $easeOutQuart;
+      
+      &:hover {
+        background-color: #F5F7FE;
+      }
+    }
+  }
+}
+
+.mega-cta {
+  position: relative;
+  width: rem(270px);
+  flex: 0 1 auto;
+
+  &__img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: rem(4px);
+    }
+  }
+
+  &__content {
+    padding: rem(90px) rem(30px);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__subtitle {
+    font-size: rem(12px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: rem(22px);
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  &__link {}
+}

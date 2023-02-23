@@ -1,0 +1,68 @@
+.masthead.-type-8 {
+  position: relative;
+  padding-top: rem(280px);
+  padding-bottom: rem(220px);
+
+  @include media-below(lg) {
+    padding-top: 220px;
+    padding-bottom: 140px;
+  }
+
+  @include media-below(md) {
+    padding-top: 200px;
+    padding-bottom: 40px;
+  }
+}
+
+.masthead.-type-8 .masthead {
+  &__bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      width: 90%;
+      height: auto;
+
+      @include media-below(lg) {
+        width: 55vw;
+      }
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 30%;
+    left: 58%;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: rem(60px);
+    font-weight: 700;
+    line-height: 1.4;
+
+    @include media-below(sm) {
+      font-size: 42px;
+    }
+  }
+}

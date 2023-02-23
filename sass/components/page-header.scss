@@ -1,0 +1,264 @@
+.page-header.-base {
+  position: relative;
+  margin-top: rem(105px);
+  
+  @include media-below(sm) {
+    margin-top: rem(80px);
+  }
+}
+
+.page-header.-base .page-header {
+  &__bg {
+    padding: 0 rem(55px);
+    
+    @include media-below(md) {
+      z-index: -1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background-color: #F5F7FE;
+
+      img {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    padding-bottom: rem(60px);
+    
+    @include media-below(md) {
+      position: relative;
+      transform: none;
+      top: unset;
+      left: unset;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    
+    @include media-below(sm) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-size: rem(60px);
+
+    @include media-below(sm) {
+      font-size: rem(50px);
+    }
+  }
+}
+
+.page-header.-base.-dark .page-header {
+  &__bg {
+    @include media-below(md) {
+      background-color: #1A3454;
+    }
+  }
+}
+
+
+.page-header.-blue {
+  position: relative;
+  
+  @include media-below(md) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+}
+
+.page-header.-blue .page-header {
+  &__bg {
+    height: rem(480px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include media-below(md) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    padding-top: rem(80px);
+    
+    @include media-below(md) {
+      position: relative;
+      transform: none;
+      top: unset;
+      left: unset;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    
+    @include media-below(sm) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    font-size: rem(60px);
+
+    @include media-below(sm) {
+      font-size: rem(50px);
+    }
+  }
+}
+
+
+.page-header.-image {
+  position: relative;
+  padding-top: rem(330px);
+  padding-bottom: rem(180px);
+  
+  @include media-below(lg) {
+    padding-top: 280px;
+    padding-bottom: 140px;
+  }
+
+  @include media-below(md) {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
+
+  @include media-below(sm) {
+    padding-top: 160px;
+    padding-bottom: 80px;
+  }
+}
+
+.page-header.-image .page-header {
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: rem(60px);
+
+    @include media-below(sm) {
+      font-size: rem(50px);
+    }
+  }
+}
+
+
+.page-header.-image-portfolio {
+  position: relative;
+  padding-top: rem(310px);
+  padding-bottom: rem(310px);
+  
+  @include media-below(lg) {
+    padding-top: 280px;
+    padding-bottom: 180px;
+  }
+
+  @include media-below(md) {
+    padding-top: 200px;
+    padding-bottom: 160px;
+  }
+
+  @include media-below(sm) {
+    padding-top: 160px;
+    padding-bottom: 140px;
+  }
+}
+
+.page-header.-image-portfolio .page-header {
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: rem(60px);
+
+    @include media-below(sm) {
+      font-size: rem(50px);
+    }
+  }
+}
+
+
+.page-header.-text {
+  position: relative;
+  margin-top: rem(105px);
+  padding-top: rem(95px);
+
+  @include media-below(md) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  @include media-below(sm) {
+    margin-top: rem(80px);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.page-header.-text .page-header {
+  &__title {
+    font-size: rem(60px);
+
+    @include media-below(sm) {
+      font-size: rem(50px);
+    }
+  }
+}
+
+// .page-header-bread {
+//   font-size: rem(14px);
+//   line-height: rem(16px);
+
+//   &__item {
+//     color: inherit;
+//     font-size: inherit;
+//     line-height: inherit;
+//   }
+// }

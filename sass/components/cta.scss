@@ -1,0 +1,13 @@
+.cta-image {
+  position: absolute;
+  right: -60px;
+  bottom: -2px;
+
+  @include media-below(md) {
+    position: relative;
+    right: 0;
+  }
+}
+
+.cta {
+}

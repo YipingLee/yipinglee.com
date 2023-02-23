@@ -1,0 +1,47 @@
+/*--------------------------------------------------
+	Respond form
+---------------------------------------------------*/
+
+.respondForm {
+  h3 {
+		// color: black;
+    // font-size: rem(18px);
+    // line-height: 1.2;
+    // font-weight: 600;
+		margin: 0;
+		// margin-bottom: rem(27px);
+	}
+
+	h3 small a {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+		font-size: rem(15px);
+		color: var(--accent-color);
+		margin-left: rem(8px);
+  }
+
+	&__notes {
+		color: var(--font-dark);
+		font-size: rem(16px);
+	}
+
+	.logged-in-as {
+		display: flex;
+		margin-bottom: rem(12px);
+
+		a {
+			padding-right: rem(16px);
+		}
+	}
+
+	form {
+		.form-checkbox {}
+
+    button {}
+    
+    p {
+      font-size: rem(15px);
+      line-height: 1;
+    }
+	}
+}

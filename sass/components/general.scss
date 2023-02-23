@@ -1,0 +1,134 @@
+.lines.-vertical-lines {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: rem(220px);
+  right: rem(220px);
+  display: flex;
+  justify-content: space-between;
+  
+  @include media-below(md) {
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+  }
+
+  span {
+    height: 100%;
+    width: 1px;
+    background-color: #EFF0F0;
+  }
+
+  @include media-below(sm) {
+    display: none;
+  }
+}
+
+.loadmore-hidden {
+  transition: all 0.4s $easeOutQuart;
+  opacity: 0;
+  display: none;
+  
+  &.is-active {
+    opacity: 1;
+    display: flex;
+  }
+}
+
+.switch-content {
+  position: relative;
+
+  > *:nth-child(1) {
+    transition: all 0.4s $easeOutQuart 0.2s;
+    opacity: 1;
+  }
+
+  > *:nth-child(2) {
+    transition: all 0.4s $easeOutQuart;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    margin: 0 !important;
+  }
+  
+  &.is-active {
+    > *:nth-child(1) {
+      transition: all 0.4s $easeOutQuart;
+      opacity: 0;
+    }
+
+    > *:nth-child(2) {
+      transition: all 0.4s $easeOutQuart 0.2s;
+      opacity: 1;
+    }
+  }
+}
+
+.sectionHeading {
+  &__subtitle {
+    margin-bottom: rem(37px);
+    
+    @include media-below(md) {
+      margin-bottom: rem(25px);
+    }
+    
+    span {
+      color: var(--accent-color);
+      font-size: rem(11px);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: rem(8px) rem(25px);
+      background-color: var(--light-accent-color);
+      border-radius: 200px;
+    }
+  }
+
+  &__title {
+    color: var(--text-dark-1);
+    font-size: rem(40px);
+    font-weight: 700;
+    line-height: 1.4;
+
+    @include media-below(md) {
+      font-size: rem(34px);
+    }
+
+    @include media-below(sm) {
+      font-size: rem(25px);
+    }
+
+    @include media-below(xs) {
+      br {
+        display: none !important;
+      }
+    }
+  }
+
+  &__text {
+    font-size: rem(15px);
+    line-height: rem(26px);
+    margin-top: rem(18px);
+  }
+
+  // &__button {
+  //   margin-top: 52px;
+  // }
+
+  &.-light {
+    .sectionHeading__subtitle {
+      span {
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+      }
+    }
+
+    .sectionHeading__title {
+      color: white;
+    }
+  }
+}

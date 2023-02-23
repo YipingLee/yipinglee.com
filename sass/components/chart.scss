@@ -1,0 +1,229 @@
+.bar-stroke-hidden {
+  stroke-width: 0px !important;
+}
+
+.pieChart {
+  &__chart {
+    transform: rotate(-90deg);
+    @include flexCenter;
+  }
+
+  circle {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+
+  circle.pieChart__bar {
+    stroke: var(--accent-color);
+    stroke-width: 1.5px;
+  }
+
+  &__back {
+    stroke: black;
+    stroke-width: 1.5px !important;
+  }
+
+  &__percent {
+    transform: rotate(90deg);
+    position: absolute;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 600;
+
+    @include media-below(md) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+
+  &__title {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21px;
+
+    @include media-below(md) {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__text {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 24px;
+
+    @include media-below(md) {
+      margin-top: 8px;
+    }
+  }
+}
+
+
+.pieChart {
+  transition: background-color 0.35s $easeOutQuart;
+
+  .pieChart-title,
+  .pieChart-text,
+  .pieChart-percent {
+    transition: color 0.35s $easeOutQuart;
+  }
+}
+
+
+.pieChart-light {
+  circle {
+    stroke: rgba(white, 0.2);
+  }
+
+  &:hover {
+    background-color: white;
+  
+    .pieChart-percent,
+    .pieChart-title {
+      color: black;
+    }
+
+    .pieChart-text {
+      color: var(--font-dark);
+    }
+  }
+}
+
+
+.pieChart-dark {
+  circle {
+    stroke: rgba(black, 0.1);
+  }
+
+  &:hover {
+    background-color: black;
+  
+    .pieChart-percent,
+    .pieChart-title {
+      color: white;
+    }
+
+    .pieChart-text {
+      color: var(--font-light);
+    }
+  }
+}
+
+
+
+
+// .lineChart {
+//   &__item {
+//     margin-top: rem(32px);
+//     margin-top: rem(32px);
+
+//     &:first-child {
+//       margin-top: 0;
+//     }
+//   }
+
+//   &__content {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: rem(8px);
+//   }
+
+//   &__content p {
+//     font-size: inherit;
+//     color: inherit;
+//     line-height: inherit;
+//   }
+
+//   &__number {}
+
+
+//   &__bar {
+//     position: relative;
+//     display: flex;
+//     align-items: center;
+//     width: 100%;
+//     height: rem(6px);
+//     border-radius: 200px;
+//   }
+  
+//   &__bar__item {
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 200px;
+//     transform-origin: 0% 50%;
+//     transform: scaleX(0);
+//   }
+  
+//   &__bar__bg {
+//     position: absolute;
+//     width: 100%;
+//     height: rem(6px);
+//     background-color: rgba(black, 0.1);
+
+//     &.-light {
+//       background-color: rgba(white, 0.1);
+//     }
+//   }
+// }
+
+
+.lineChart {
+  &__item {
+    margin-top: rem(32px);
+    margin-top: rem(32px);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(8px);
+  }
+
+  &__content p {
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+  }
+
+  &__number {}
+
+
+  &-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: rem(6px);
+    border-radius: 200px;
+  }
+  
+  &-bar__item {
+    width: 100%;
+    height: 100%;
+    
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+    border-radius: 200px;
+  }
+  
+  &-bar__bg {
+    position: absolute;
+    width: 100%;
+    height: rem(6px);
+    border-radius: 200px;
+    background-color: rgba(black, 0.1);
+
+    &.-light {
+      background-color: rgba(white, 0.1);
+    }
+  }
+}

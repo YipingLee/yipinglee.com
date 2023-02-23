@@ -1,0 +1,145 @@
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text-dark-1);
+  margin: 0;
+}
+
+h1 { font-size: var(--text-6xl); }
+h2 { font-size: var(--text-5xl); }
+h3 { font-size: var(--text-4xl); }
+h4 { font-size: var(--text-3xl); }
+h5 { font-size: var(--text-2xl); }
+h6 { font-size: var(--text-xl); }
+
+.text {
+  &-xs   { font-size: var(--text-xs) !important; }
+  &-sm   { font-size: var(--text-sm) !important; }
+  &-base { font-size: var(--text-base) !important; }
+  &-lg   { font-size: var(--text-lg) !important; }
+  &-xl   { font-size: var(--text-xl) !important; }
+  &-2xl  { font-size: var(--text-2xl) !important; }
+  &-3xl  { font-size: var(--text-3xl) !important; }
+  &-4xl  { font-size: var(--text-4xl) !important; }
+  &-5xl  { font-size: var(--text-5xl) !important; }
+  &-6xl  { font-size: var(--text-6xl) !important; }
+
+  &-25  { font-size: var(--text-25) !important; }
+  &-32  { font-size: var(--text-32) !important; }
+  &-16  { font-size: var(--text-16) !important; }
+  &-22  { font-size: var(--text-22) !important; }
+  &-26  { font-size: var(--text-26) !important; }
+  &-30  { font-size: var(--text-30) !important; }
+  &-50  { font-size: var(--text-50) !important; }
+}
+
+
+$_typo-breakpoints: lg, md, sm, xs;
+
+@each $break in $_typo-breakpoints {
+  @include media-below($break) {
+    .#{$break}\:text {
+      &-xs   { font-size: var(--text-xs) !important; }
+      &-sm   { font-size: var(--text-sm) !important; }
+      &-base { font-size: var(--text-base) !important; }
+      &-lg   { font-size: var(--text-lg) !important; }
+      &-xl   { font-size: var(--text-xl) !important; }
+      &-2xl  { font-size: var(--text-2xl) !important; }
+      &-3xl  { font-size: var(--text-3xl) !important; }
+      &-4xl  { font-size: var(--text-4xl) !important; }
+      &-5xl  { font-size: var(--text-5xl) !important; }
+      &-6xl  { font-size: var(--text-6xl) !important; }
+
+      &-32 { font-size: var(--text-32) !important; }
+    }
+  }
+}
+
+
+.lh {
+  &-1  { line-height: 1 !important; }
+  &-11  { line-height: 1.1 !important; }
+  &-12  { line-height: 1.2 !important; }
+  &-13  { line-height: 1.3 !important; }
+  &-14  { line-height: 1.4 !important; }
+  &-14  { line-height: 1.5 !important; }
+  &-16 { line-height: 1.6 !important; }
+  &-17 { line-height: 1.7 !important; }
+  &-18 { line-height: 1.8 !important; }
+  &-19 { line-height: 1.9 !important; }
+  &-2 { line-height: 2 !important; }
+}
+
+// .tracking {
+//   &-minus-sm { letter-spacing: -0.03em !important; }
+//   &-none { letter-spacing: 0 !important; }
+//   &-sm   { letter-spacing: 0.08em !important; }
+//   &-md   { letter-spacing: 0.12em !important; }
+//   &-lg   { letter-spacing: 0.16em !important; }
+// }
+
+// .number {
+//   font-family: var(--font-secondary);
+//   line-height: 1;
+//   letter-spacing: -0.02em;
+
+//   &.-circle-right {
+//     display: flex;
+//     align-items: center;
+
+//     &::after {
+//       content: "";
+//       width: rem(6px);
+//       height: rem(6px);
+//       border-radius: 100%;
+//       background-color: black;
+//       margin-left: 8px;
+//     }
+//   }
+
+//   &.-left { margin-left: rem(-4px); }
+
+//   &.-sm { font-size: rem(60px); }
+//   &.-md { font-size: rem(75px); }
+//   &.-lg { font-size: rem(90px); }
+
+//   @include media-below(md) {
+//     &.-sm { font-size: rem(60px); }
+//     &.-md { font-size: rem(70px); }
+//     &.-lg { font-size: rem(84px); }
+//   }
+
+//   @include media-below(sm) {
+//     &.-sm { font-size: rem(56px); }
+//     &.-md { font-size: rem(64px); }
+//     &.-lg { font-size: rem(78px); }
+//   }
+// }
+
+// .numBlock {
+//   &__number {
+//     font-family: var(--font-secondary);
+//     font-size: rem(88px);
+//     font-weight: 800;
+//     line-height: 1;
+//     letter-spacing: -0.05em;
+
+//     @include media-below(md) {
+//       font-size: rem(80px);
+//     }
+//     @include media-below(sm) {
+//       font-size: rem(68px);
+//     }
+//   }
+
+//   &__additional {
+//     font-size: rem(40px);
+//     opacity: 0.4;
+//     letter-spacing: -0.04em;
+//     font-weight: 600;
+//   }
+
+//   &__text {
+//     line-height: 1.4;
+//   }
+// }

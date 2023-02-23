@@ -1,0 +1,44 @@
+.shopCard {
+  &__image {
+    z-index: 5;
+    position: relative;
+
+    &:hover {
+      .shopCard__button {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__button {
+    z-index: 10;
+    position: absolute;
+    bottom: rem(10px);
+    left: rem(10px);
+    right: rem(10px);
+    font-size: rem(14px);
+    line-height: rem(16px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: rem(18px);
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #18130C;
+    transition: all 0.3s $easeOutQuart;
+    opacity: 0;
+
+    .icon {
+      margin-right: rem(14px);
+      stroke-width: 1;
+    }
+  }
+
+  &__content {}
+
+  &__category {}
+
+  &__title {}
+
+  &__price {}
+}

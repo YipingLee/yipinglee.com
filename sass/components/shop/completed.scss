@@ -1,0 +1,110 @@
+.shopCompleted-header {
+  text-align: center;
+
+  .icon {
+    margin: 0 auto;
+    width: rem(80px);
+    height: rem(80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--accent-color);
+    border-radius: 100%;
+
+    svg {
+      stroke-width: 4;
+      color: white;
+      width: rem(36px);
+      height: rem(36px);
+    }
+  }
+
+  .title {
+    font-size: rem(40px);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0em;
+    margin-top: rem(20px);
+
+    @include media-below(sm) {
+      font-size: rem(32px);
+    }
+  }
+
+  .subtitle {
+    font-size: rem(14px);
+    line-height: rem(16px);
+    margin-top: rem(10px);
+  }
+}
+
+.shopCompleted-info {
+  margin-top: rem(40px);
+  border: 1px dashed var(--accent-color);
+  border-radius: rem(8px);
+  background-color: var(--accent-light-color);
+  padding: rem(40px) rem(52px);
+  
+  @include media-below(sm) {
+    padding: rem(34px);
+  }
+
+  &__item {
+    .subtitle {
+      font-size: rem(14px);
+    }
+
+    .title {
+      font-size: rem(15px);
+      margin-top: rem(15px);
+      font-weight: 600;
+    }
+  }
+}
+
+.shopCompleted-footer {
+  margin-top: rem(60px);
+  
+  @include media-below(sm) {
+    margin-top: rem(40px);
+  }
+
+  &__wrap {
+    padding: rem(60px);
+
+    @include media-below(sm) {
+      padding: rem(34px);
+    }
+    
+    .title {
+      font-size: rem(22px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: rem(28px);
+    }
+
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: rem(14px);
+      line-height: rem(60px);
+      text-align: right;
+
+      &.-border-none {
+        border: none !important;
+      }
+    
+      + .item {
+        border-top: 1px solid #E4E4E4;
+        margin-top: rem(3px);
+      }
+    }
+  }
+
+  &__button {
+    margin-top: rem(20px);
+
+    button {}
+  }
+}

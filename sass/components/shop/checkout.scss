@@ -1,0 +1,10 @@
+.shopCheckout {}
+
+.shopCheckout-form {
+  &__title {
+    font-size: rem(18px);
+    font-weight: 600;
+    line-height: rem(21px);
+    letter-spacing: 0em;
+  }
+}

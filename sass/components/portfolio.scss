@@ -1,0 +1,254 @@
+.portfolio {
+  &__image {
+    img {}
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 40px;
+    padding-bottom: 16px;
+    width: 650px;
+    max-width: 80%;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.3s ease-out 0.2s;
+
+    @include media-below(md) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__category {
+    color: #D7926B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+
+    @include media-below(md) {
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+
+    @include media-below(md) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
+
+.swiper-slide-active .portfolio__content {
+  opacity: 1;
+}
+
+
+.portfolioCard.-type-1 {
+  position: relative;
+  display: block;
+
+  &:hover {
+    .portfolioCard__content {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+.portfolioCard.-type-1 .portfolioCard {
+
+  &__image {}
+
+  &__content {
+    position: absolute;
+    bottom: rem(10px);
+    left: rem(10px);
+    right: rem(10px);
+    background-color: white;
+
+    transform: translateY(-16px);
+    transition: all 0.3s $easeOutQuart;
+    opacity: 0;
+  }
+
+  &__category {}
+
+  &__title {}
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    z-index: 2;
+  }
+}
+
+
+.portfolioCard.-type-2 {
+  position: relative;
+
+  .portfolioCard__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    background-color: rgba(black, 0.6);
+    padding-left: rem(40px);
+    padding-bottom: rem(30px);
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .portfolioCard__content a {
+    position: relative;
+    z-index: 4;
+  }
+
+  .portfolioCard__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    z-index: 2;
+  }
+}
+
+
+.portfolioCard.-zoom {
+  .portfolioCard__img {
+    overflow: hidden;
+
+    > div {
+      transition: all 0.5s $easeOutQuart;
+    }
+  }
+
+  &:hover {
+    .portfolioCard__img > div {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+$_portfolioEasing: $easeOutQuart;
+$_portfolioTime: 0.4s;
+
+.portfolioCard.-type-2.-hover {
+  .portfolioCard__img {
+    overflow: hidden;
+  }
+
+  .portfolioCard__img__inner {
+    transform: scale(1.01);
+    transition: transform 0.4s $_portfolioEasing;
+  }
+
+  .portfolioCard__content {
+    opacity: 0;
+    transition: opacity 0.4s $_portfolioEasing;
+
+    p,
+    a {
+      opacity: 0;
+      transform: translateY(rem(32px));
+
+      transition:
+        opacity 0.4s $_portfolioEasing,
+        transform 0.4s $_portfolioEasing;
+    }
+
+    h3 {
+      opacity: 0;
+      transform: translateY(rem(32px));
+
+      transition:
+        opacity 0.4s $_portfolioEasing 0.06s,
+        transform 0.4s $_portfolioEasing 0.06s;
+    }
+  }
+
+  &:hover {
+    .portfolioCard__img__inner {
+      transform: scale(1.08);
+    }
+
+    .portfolioCard__content {
+      opacity: 1;
+  
+      a,
+      p,
+      h3 {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  }
+}
+
+
+
+.portfolioCard.-type-3 {
+  position: relative;
+  display: block;
+
+  &:hover {
+    .portfolioCard__content {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+.portfolioCard.-type-3 .portfolioCard {
+  &__image {}
+
+  &__content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #E4E4E4;
+    padding: rem(40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    transform: translateY(-10px);
+    transition: all 0.3s $easeOutQuart;
+    opacity: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #D7926B;
+    }
+  }
+
+  &__category {}
+
+  &__title {}
+
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+    z-index: 2;
+  }
+}

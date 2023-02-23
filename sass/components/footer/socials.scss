@@ -1,0 +1,23 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  > * {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.2s $easeOutQuart;
+      
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+
+  > * + * {
+    margin-left: rem(16px);
+  }
+}

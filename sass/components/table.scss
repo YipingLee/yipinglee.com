@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+
+  thead {
+    background-color: var(--bg-light-4);
+    color: var(--accent-color);
+  }
+
+  th {
+    padding: rem(25px) rem(25px);
+  }
+
+  tbody {
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #EEEEEE;
+  }
+
+  td {
+    padding: rem(25px) rem(25px);
+    color: #615E5E;
+  }
+
+  &.-striped {
+    > tbody > tr:nth-of-type(even) {
+      background-color: #F6F8F9;
+    }
+  }
+}
