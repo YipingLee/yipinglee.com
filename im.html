@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Yiping Lee's Portfolio</title>
+  <meta name="description" content="Yiping Lee (Phoebe) is a UI/UX designer who is passionate about solving problems through compelling design solutions.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">Home</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index.html#projects">Projects</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about.html">About</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">Contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="md:d-none ml-30">
+                    <a href="login.html" class="button -sm -green text-white">Sign in</a>
+                  </div>
+                  -->
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      Close
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">Customer Service Instant Messaging (IM) System</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">Integrating customer service, advisors, and administrative roles, we built a parent-facing instant messaging system that significantly enhanced communication transparency and efficiency.</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Role</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Design lead</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Device</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Web, iOS and Android</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Tools</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma, Illustrator, Photoshop, Miro and Notion</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">Published</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>May 2024</p>
+                    </div>
+                  </div>
+                  <!--
+                  <div class="col-auto mt-16">
+                    <a href="https://i-life.org.tw/" class="button -md -accent -uppercase text-white">View Website</a>
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/im/banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">Background</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">Before launching this system, we faced persistent issues in parent-advisor communication: fragmented messaging, constant switching between platforms, blurred roles between customer service and advisors, and time-consuming, error-prone manual forwarding of messages.</p>
+                  <ul class="ul-list y-gap-16">
+                    <li class=""><b>Fragmented Channels:</b> Parents and advisors regularly used 3+ different private messaging apps (LINE, WhatsApp, WeChat), making it hard to trace and document conversations.</li>
+                    <li class=""><b>Inefficient Work Hours:</b> Advisors spent 100+ minutes per week manually forwarding messages—time that should have been dedicated to their core responsibilities.</li>
+                    <li class=""><b>Unclear Roles:</b> Around 50% of parents bypassed customer service and messaged advisors directly, creating confusion in ownership and making handoffs during leave periods chaotic and stressful.</li>
+                  </ul>
+                  <p class="page-header__text">To address these issues, we designed an integrated instant messaging (IM) system within both the parent app and our internal platform. This unified system connects parents, customer service, and advisors to solve problems of fragmented communication, unclear responsibilities, and inefficiencies.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">My Role</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">As the lead designer, I oversaw the full design process—from research and workflow definition to information architecture and UI/UX design. I closely collaborated with PMs, engineers, and cross-functional teams, including customer service and advisors.</p>
+                  <!--
+                  <ul class="ul-list">
+                    <li class=""><b>Unify communication:</b> Eliminate fragmented, multi-app chaos.</li>
+                    <li class=""><b>Clarify roles and permissions:</b> Free support agents from excessive forwarding; let advisors focus on their domain.</li>
+                    <li class=""><b>Increase operational efficiency:</b> Reduce duplicated work and make KPIs traceable through systemized design.</li>
+                    <li class=""><b>Deliver fast, test fast:</b> Integrate the third-party SDK (SendBird) and validate value through a rapid MVP release.</li>
+                  </ul>
+                  -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research & Insight -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Research & Insight</span>
+                </div>
+                <h2 class="sectionHeading__title">Framing the Real Problem</h2>
+                <p class="y-gap-16 pt-24 text-left">We used a design thinking approach to define problems from the ground up, analyzing the situation through Pain Points → Insight → Solution to ensure our design decisions addressed the most urgent and high-impact needs.</p>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-lg-6">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">Stakeholder Interviews<br> Define the Problem Clearly</h2>
+                <p class="ty-gap-16 pt-24 text-left">To understand operational bottlenecks, we conducted in-depth interviews with key stakeholders—customer service staff, advisors, scheduling administrators, and internal leads.</p>
+                <p class="y-gap-16 pt-24 text-left">From extensive meeting notes and interview transcripts, we distilled the ambiguous "communication issues" into three key pain points that could be addressed through design:</p>
+              </div>
+            </div>
+            <div class="d-flex sm:direction-column items-center col-lg-6">
+              <section class="">
+                <div class="row no-gutters justify-content-center">
+                  <div class="bg-white border-light rounded-8 shadow-card">
+                    <div class="shopCompleted-footer__wrap">
+                      <h5 class="title">
+                      Core Problem Synthesis
+                      </h5>
+                      <div class="item">
+                        <span class="text-16 fw-600 text-black col-6">Pain Point</span>
+                        <span class="text-16 fw-600 text-black col-6">Insight</span>
+                      </div>
+                      <div class="item">
+                        <span class="col-6"><b>Fragmented Channels:</b><br> Parents and internal teams constantly switch between LINE, WhatsApp, WeChat</span>
+                        <span class="col-6">Lack of a unified platform leads to duplicate workflows and information gaps. An average of 100 minutes/week is wasted on message forwarding, increasing labor costs and the risk of missed information.</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>Unmeasurable Work Hours:</b><br> Hard to track KPIs or manage tickets systematically</span>
+                        <span class="col-6">The absence of case ownership, permissions, and closure logs makes it hard for customer service and managers to track progress or evaluate team performance—hindering improvement and training.</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>Unclear Responsibilities:</b><br> Blurred boundaries between customer service and advisors; cases require manual handover during leave periods</span>
+                        <span class="col-6">Internal roles are not clearly defined, and there's no system for task assignment. Each advisor handles over 15 manual transfers during holidays, risking service interruptions and information loss.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">📌 Bringing It Back to People</h2>
+                <p class="y-gap-16 pt-24">To ensure user-centered design, we translated interview insights into user stories that reflect the real-life needs and goals of each role:</p>
+              </div>
+              <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-red-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/parent.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">Parent</h4>
+                      <p class="mt-12">"As a parent who cares about my child's education, I want to ask questions through an official channel and track their status, so I won’t worry about being ignored."</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-green-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/customer_service.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">Customer Service</h4>
+                      <p class="mt-12">"As a service agent, I need real-time notifications for new tickets within my main work platform so I can maintain workflow and meet service standards without missing anything."</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/advisor.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">Advisor</h4>
+                      <p class="mt-12">"As an advisor, I want to clearly see only the cases assigned to me so I can stay focused on supporting my assigned parents instead of getting bogged down by administrative noise."</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/manager.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">Manager</h4>
+                      <p class="mt-12">"As a department head, I want a dashboard that visualizes case progress so I can objectively evaluate performance, identify bottlenecks, and provide targeted training."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sectionHeading ">
+                <h5 class="title y-gap-16 pt-24">Therefore, we defined our MVP around the above pain points and user stories, prioritized high-impact solutions.</h5>
+              </div>
+            </div>            
+            <div class="pt-60"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Research & Insight -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- The Goal -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="row justify-center text-center">
+                <div class="col-auto">
+                  <div class="sectionHeading__subtitle">
+                    <span>The Goal</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">Solving Messaging Chaos with<br> Structure, Clarity, and Speed</h2>
+                    <p class="y-gap-16 pt-24">With the core problems clarified, we focused this project on solving the following key challenges:</p>
+                    <div class="text-left">
+                      <ul class="ul-list y-gap-16">
+                        <li class=""><b>Build a unified communication platform:</b> End platform-switching chaos.</li>
+                        <li class=""><b>Define roles and permissions clearly:</b> Free advisors and customer service from burdensome message handoffs.</li>
+                        <li class=""><b>Improve operational efficiency:</b> Reduce repetitive work through systemization and enable trackable KPIs.</li>
+                        <li class=""><b>Deliver and validate quickly:</b> Research SendBird integration and release a working MVP within tight deadlines.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The Goal -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Strategy & Solution -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>Strategy & Solution</span>
+                </div>
+              </div>
+            </div>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h2 class="sectionHeading__title">From Chaos to Clarity:<br> Case-Based Communication as the Core Framework</h2>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                    <p class="">
+                      We adopted a case-based design strategy—each parent query is treated as a distinct, traceable case—establishing a collaborative, trackable, and accountable communication structure.<br>
+                      Compared to traditional chat-based messaging, the case-oriented model offers several advantages:
+                    </p>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                    <ol class="ol-list y-gap-16 text-left">
+                      <li class=""><b>Centralized Information with History Logs:</b> All interactions, assignees, and statuses are tied to each case.</li>
+                      <li class=""><b>Clear Role Assignments:</b> Cases are auto- or manually assigned, ensuring continuity and accountability.</li>
+                      <li class=""><b>Manageable and Measurable:</b> Case statuses and histories help managers track progress and evaluate performance.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 Challenge 1: Scattered Messaging Makes Tracking Difficult</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>Problem</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Parents use multiple apps (LINE, WeChat, WhatsApp), making messages hard to consolidate.</li>
+                      <li class="">No tagging or conversation logs—customer service agents can’t track history or progress.</li>
+                      <li class="">Private messaging tools lack corporate oversight and compliance features.</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>Solution</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Embed "Ask Customer Service" and chat features into the parent app.</li>
+                    </ul>
+                  </div>
+                  <section class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <div class="container">
+                      <div data-anim-wrap class="row y-gap-48 pt-20 md:pt-48">
+                        <div data-anim-child="slide-up delay-1" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                              <img class="max-w-100" src="img/projects/im/case.png" alt="image">
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div data-anim-child="slide-up delay-2" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                              <img class="max-w-100" src="img/projects/im/message.png" alt="image">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 Challenge 2: No Assignment System → Ambiguous Ownership</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>Problem</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">No assignment flow; cases need manual handover during advisor leave.</li>
+                      <li class="">Lack of ownership visibility—makes follow-up unclear.</li>
+                      <li class="">High service disruption risk during holidays.</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>Solution</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Add dashboard page and assignment features in the internal MMS system, including claim, assign, and case history pages.</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/im/dashboard.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 Challenge 3: High Repetition, Low Efficiency</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>Problem</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Common questions require repetitive responses, wasting time.</li>
+                      <li class="">Inconsistent reply quality across agents.</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>Solution</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Add canned responses in the case reply interface, centrally managed in the admin panel.</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/im/canned.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 Challenge 4: Search and Case Tracking Pain for Advisors</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>Problem</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Advisors spend over 100 minutes/week forwarding messages or confirming case status.</li>
+                      <li class="">No personalized task dashboard or filtering options.</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>Solution</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">Build "My Tasks" page so advisors can easily view cases assigned to them. → Enables focus on relevant work while reducing context-switching and message forwarding.</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/im/my_task.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- End of Strategy & Solution -->
+
+      <div class="layout-pt-md"></div>
+
+      
+
+        
+      <!-- Final Design & Flow -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <section class="layout-pt-sm layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center text-center">
+                  <div class="col-xl-8 col-lg-7">
+                    <div class="sectionHeading__subtitle">
+                      <span>Final Design & Flow</span>
+                    </div>
+                    <div class="sectionHeading">
+                      <h2 class="sectionHeading__title">For Parents: Simple & Transparent</h2>
+                      <p class="sectionHeading__text mt-20">Parents can easily initiate support by tapping the “Ask a Question” button in the app, opening a chat thread tied to a specific case. This allows for instant communication while enabling real-time status tracking and access to message history at any time.</p>                          
+                    </div>
+                  </div>
+                </div>
+                <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                  <div data-anim-child="slide-up delay-1" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_1.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_2.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_3.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_4.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!--
+            <section class="layout-pt-xs layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center">
+                  <div class="col-xl-8 col-lg-9">
+                    <div class="sectionSlider relative js-sectionSlider overflow-hidden" data-cursor-slider="slider" data-gap="48" data-slider-col="base-1 lg-1 md-1 sm-1" data-center data-loop>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_1.png" alt="Image">
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_2.png" alt="Image">
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="ratio ratio-97:55">
+                            <img class="absolute-full-center object-fit-cover rounded-8" src="img/projects/i_life/pov_3.png" alt="Image">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="nav -slider -absolute-center z-5 px-30 justify-between md:justify-center md:pt-60 sm:pt-40">
+                        <div data-cursor class="nav__item -left js-prev">
+                          <i class="icon" data-feather="arrow-left"></i>
+                        </div>
+                        <div data-cursor class="nav__item -right ml-20 js-next">
+                          <i class="icon" data-feather="arrow-right"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            -->
+            <!--
+            <section data-anim="slide-up delay-1" class="layout-pt-sm layout-pb-sm">
+              <div class="sectionSlider overflow-hidden js-sectionSlider" data-cursor-slider="slider" data-gap="60" data-slider-col="base-2 lg-2 md-2 sm-1" data-center data-loop>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_1.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_2.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <div class="ratio ratio-8:5">
+                        <img class="absolute-full-center object-fit-cover" src="img/projects/i_life/pov_3.png"image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            -->
+            <section class="layout-pt-sm layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center text-center">
+                  <div class="col-xl-8 col-lg-7">
+                    <div class="sectionHeading">
+                      <h2 class="sectionHeading__title">For Internal Teams: Clear Tasks, Faster Workflows</h2>
+                      <p>The system sends real-time notifications for new tasks, combined with case assignment logic and a “My Tasks” dashboard, allowing each team member to quickly grasp their responsibilities. The end-to-end workflow supports comprehensive case records, enabling efficient KPI management and case tracking.</p>
+                    </div>
+                  </div>
+                </div>
+                <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                  <div data-anim-child="slide-up delay-1" class="col-md-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center">
+                        <img class="max-w-100" src="img/projects/im/notification_center.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div data-anim-child="slide-up delay-2" class="col-md-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center">
+                        <img class="max-w-100" src="img/projects/im/case_history.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            
+          </div>
+        </div>
+      </section>
+      <!-- End of Design & Flow -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Results & Impact -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="row justify-center text-center">
+                <div class="col-xl-8 col-lg-7">
+                  <div class="sectionHeading__subtitle">
+                    <span>Results & Impact</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">Turning Design Into Business Value</h2>
+                    <div class="text-left">
+                      <ul class="ul-list y-gap-16 y-gap-16 pt-24">
+                        <li class=""><b>Advisor Workload Reduced:</b> By systemizing message handoffs, each advisor saved up to 100 minutes per week on repetitive communication tasks. This translated to a total of 3,000 minutes saved weekly across the team, allowing advisors to focus more on teaching and student care.</li>
+                        <li class=""><b>Data-Driven Decisions:</b> For the first time, managers gained access to clean, structured case data. They could instantly track case types, resolution times, and team workload—enabling smarter service optimization.</li>
+                        <li><b>Improved Team Collaboration:</b> Clearer roles, smarter workflows, and visible accountability significantly reduced friction caused by information gaps, boosting overall team satisfaction and operational harmony.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Results & Impact -->
+
+      <div class="layout-pt-md"></div>
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="video-platform.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">Prev</div>
+                      <p class="text-dark mt-8">Streaming Service Platform Redesign</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="messaging-service.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">Next</div>
+                      <p class="text-dark mt-8">Instant Messaging Service</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
