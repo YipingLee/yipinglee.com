@@ -1189,7 +1189,7 @@ body {
   max-width: 100%;
   background-color: white;
   color: var(--font-dark);
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -1271,7 +1271,7 @@ ul, li {
 
 p {
   margin: 0;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.625rem;
 }
 
@@ -3593,7 +3593,7 @@ h6 {
 }
 
 .sectionHeading__text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.625rem;
   margin-top: 1.125rem;
 }
@@ -6685,10 +6685,13 @@ body.preloader-visible .preloader {
 .shopCompleted-footer__wrap .item {
   display: flex;
   justify-content: space-between;
+  /* 
   align-items: center;
+  */
   font-size: 0.875rem;
-  line-height: 3.75rem;
-  text-align: right;
+  line-height: 1.5rem;
+  text-align: left;
+  padding-top: 0.5rem;
 }
 
 .shopCompleted-footer__wrap .item.-border-none {
