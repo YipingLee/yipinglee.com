@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="onelink_plus.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">學習管理平台 (SaaS)</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">此平台為補習班建立閉環學習生態系統，將複雜的行政和教學工作流程轉化為可操作的數據洞察。並連續兩年榮獲 Holon IQ 50 獎項。</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">角色</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>設計主管</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">裝置</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>網頁、iOS 和 Android</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">工具</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma、Illustrator、Photoshop 和 Notion</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">發布日期</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>2023年12月 - 2025年5月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/onelink_plus/banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">背景</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">台灣的補習班通常會提前學校課程 1-2 週進行教學，幫助學生預習和鞏固學習。然而，大多數補習班面臨著共同的營運挑戰：</p>
+                  <ul class="ul-list pt-12">
+                    <li class=""><b>工具零散：</b>教師需要在多個平台之間切換來進行內容確認、活動測驗派發和與家長溝通</li>
+                    <li class=""><b>手動流程：</b>指派測驗和追蹤學生完成情況需要大量的時間</li>
+                    <li class=""><b>可見度有限：</b>沒有系統化的方法來識別哪些學生落後或哪些概念需要加強</li>
+                    <li class=""><b>溝通斷層：</b>家長對孩子的學習進度缺乏透明度</li>
+                  </ul>
+                  <p class="page-header__text pt-24">為了解決這些挑戰，我們設計了這個平台，一個統一的學習管理平台，簡化整個教學工作流程，同時為教師提供一目瞭然的報表，並為家長輕鬆了解學生的學習狀況。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">主要挑戰</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">從 0 開始為多樣化營運需求的補習班建立全面的學習管理系統</li>
+                    <li class="">為三個不同的使用者角色（管理員、教師、學生/家長）設計具有不同工作流程和目標介面</li>
+                    <li class="">創建數據視覺化儀表板，幫助教師快速識別學習落後的學生</li>
+                    <li class="">將多種學習產品（電子書、測驗、口說練習）整合到一個統一的平台中</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">解決方案</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">建立閉環學習循環：<b>預習 → 上課 → 測驗 → 診斷 → 補救練習</b></li>
+                    <li class="">為機構管理員、教師和學生/家長設計基於角色的介面</li>
+                    <li class="">建立全面的分析儀表板，包括學習進度追蹤和知識缺口分析</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">我的角色</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">作為設計主管，我負責平台的端到端 UX/UI 設計，包括資訊架構、三個不同角色的使用者流程、數據視覺化儀表板和設計系統。<br/>
+                    我與產品經理密切合作，他們在合作補習班進行實地研究，我將他們的觀察轉化為設計決策。我也與工程團隊合作，確保設計的可行性，並在網頁和行動介面之間保持一致性。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discovery & Problem -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>探索與問題</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-lg-6">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">理解補習班的工作流程</h2>
+                <p class="ty-gap-16 pt-24 text-left">為了理解營運需求，我們透過以下方式收集洞察：</p>
+                <ul class="ul-list pt-12 text-left">
+                  <li class=""><b>競爭分析</b>：分析台灣和國外現有的學習管理平台</li>
+                  <li class=""><b>實地觀察</b>：產品經理訪問合作補習班</li>
+                  <li class=""><b>利益相關者訪談</b>：與補習班營運者和教師進行訪談</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex sm:direction-column items-center col-lg-6">
+              <section class="">
+                <div class="row no-gutters justify-content-center">
+                  <div class="bg-white border-light rounded-8 shadow-card">
+                    <div class="shopCompleted-footer__wrap">
+                      <h5 class="title">核心問題綜合分析</h5>
+                      <div class="item">
+                        <span class="text-16 fw-600 text-black col-6">痛點</span>
+                        <span class="text-16 fw-600 text-black col-6">洞察</span>
+                      </div>
+                      <div class="item">
+                        <span class="col-6"><b>沒有統一儀表板：</b><br>教師需要在多個工具之間切換以檢查學生進度</span>
+                        <span class="col-6">一個集中的視圖，一目了然地顯示所有學生的學習狀態，將大幅減少認知負荷並節省時間</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>手動派發測驗與作業：</b><br>安排和派發測驗與作業非常耗時</span>
+                        <span class="col-6">提前學校 1-2 週課程同步的自動派發排程，減少繁瑣的行政工作</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>學習缺口難以發現：</b><br>難以識別哪些學生在哪些概念上遇到困難</span>
+                        <span class="col-6">基於知識點的分析將能夠針對性介入，而不是一刀切的補救措施</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">📌 回歸到人</h2>
+                <p class="y-gap-16 pt-24">為了確保以使用者為中心的設計，我們為每個角色定義了使用者故事：</p>
+              </div>
+              <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-red-light mr-30 sm:mr-0">
+                      <img src="img/projects/onelink_plus/admin.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">機構管理員</h4>
+                      <p class="mt-12">「我需要有效管理多個分校、教師和學生，並清楚了解整體營運狀況。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-green-light mr-30 sm:mr-0">
+                      <img src="img/projects/onelink_plus/teacher.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">教師</h4>
+                      <p class="mt-12">「我想快速看到哪些學生遇到困難，這樣我可以在他們落後太多之前進行介入。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/onelink_plus/parent.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">家長</h4>
+                      <p class="mt-12">「我想了解孩子的學習進度，並在出現問題或進行測驗時收到通知。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/onelink_plus/student.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">學生</h4>
+                      <p class="mt-12">「我想按時完成預習和測驗，並複習我答錯的題目。」</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+            <div class="pt-60"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Research & Insight -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- The Goal -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="row justify-center text-center">
+                <div class="col-auto">
+                  <div class="sectionHeading__subtitle">
+                    <span>目標</span>
+                  </div>
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between">
+                        <div class="sectionHeading ">
+                          <h2 class="sectionHeading__title">創建閉環學習循環</h2>
+                          <p class="y-gap-16 pt-24">根據我們的發現，我們專注於建立一個支援完整補習工作流程的系統：</p>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 order-lg-1 order-1">
+                          <img src="img/projects/onelink_plus/cycle.png" alt="image" class="initial-img">
+                        </div>
+                        <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                          <ol class="ol-list y-gap-16 text-left">
+                            <li class=""><b>一站式平台：</b>建立全面的學習管理系統（LMS），將行政管理、教學活動、資源管理和學習回饋整合到統一的平台中</li>
+                            <li class=""><b>營運效率：</b>提供即時活動追蹤，讓教師一眼就能監控學生進度和任務完成情況</li>
+                            <li class=""><b>數據驅動教學：</b>提供分析儀表板（學習分析、綜合報告），揭示學生在各知識點的掌握程度，實現針對性介入</li>
+                            <li class=""><b>閉環學習：</b>透過錯題練習支援個人化補救，強化薄弱環節並完成學習循環</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The Goal -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Strategy & Solution -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>策略與解決方案</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sectionHeading">
+              <h2 class="sectionHeading__title">從零散工具到整合學習循環</h2>
+              <p class="y-gap-16 pt-24">我們採用了基於循環的設計策略——將學習過程視為持續循環而非離散活動——為教師創造無縫的體驗來管理和優化學生學習。</p>
+            </div>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 1：缺乏學生進度的集中視圖</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">教師沒有單一的儀表板來監控班級進度</li>
+                      <li class="">識別學習困難的學生需要檢查多個來源</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>即時班級健康檢查：</b>綜合報告儀表板在一個視圖中顯示平均正確率、評量數量和自動識別的最弱知識點</li>
+                      <li class=""><b>數據驅動的教學決策：</b>知識點錯誤率排名和認知維度雷達圖準確揭示需要重新教學的內容，以及學生是在記憶還是在更深層次的理解上遇到困難</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/onelink_plus/comprehensive_report_dashboard.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 2：耗時的測驗指派</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">為每個班級手動安排和指派測驗需要大量時間</li>
+                      <li class="">沒有系統化的方法來與學校課程進度同步</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">設計<b>自動排程系統</b>，提前學校課程 1-2 週分發內容</li>
+                      <li class="">創建<b>活動管理介面</b>，用於批量指派和追蹤</li>
+                      <li class="">建立<b>指派狀態儀表板</b>，顯示即時完成率</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/onelink_plus/activity.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 3：缺乏系統化補救措施</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>耗時的手動審查：</b>教師花費大量時間審查每份測驗卷以識別個別學生的錯誤</li>
+                      <li class=""><b>低效的補救措施：</b>沒有針對性機制，教師只能為整個班級指派相同的測驗</li>
+                      <li class=""><b>學生挫折感：</b>學生被迫重複他們已經掌握的內容，浪費時間並降低學習效果</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>一目了然發現學習缺口：</b>知識點掌握熱圖，使用顏色作為識別，讓教師對於班級或個別學生的高錯誤率概念一目了然</li>
+                      <li class=""><b>一鍵針對性指派：</b>教師可以選擇薄弱的知識點和學習困難的學生直接從分析頁面分派個人化的補救練習</li>
+                      <li class=""><b>自動化個人化複習：</b>系統自動生成個人化複習路徑——學生只練習他們尚未掌握的概念，正確回答的問題自動從未來作業中移除</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/onelink_plus/systematic_remediation.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- End of Strategy & Solution -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Results & Impact -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <!-- testimonials -->
+              <section class="layout-pb-sm">
+                <div class="container">
+                  <div class="row y-gap-32 justify-between">
+                    
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between">
+                        <div class="sectionHeading__subtitle">
+                          <span>成果與影響</span>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 order-lg-1 order-1">
+                          <div class="sectionHeading ">
+                            <h2 class="sectionHeading__title">將設計轉化為商業價值</h2>
+                          </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                          <p class="y-gap-16 pt-24">閉環學習設計和數據驅動功能成功轉化為我們 B2B 客戶可衡量的業務成長和營運效率。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- counter -->
+              <section class="layout-pb-lg">
+                <div class="container">
+                  <div data-anim="slide-up delay-2" class="row y-gap-48">
+                    <div class="col-lg-3 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="402">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">402</div>
+                        <h5 class="numCounter__title text-dark text-lg">機構</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="1254">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">25,463</div>
+                        <h5 class="numCounter__title text-dark text-lg">學生</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="6197">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">6,197</div>
+                        <h5 class="numCounter__title text-dark text-lg">教師</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="248620">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">248,620</div>
+                        <h5 class="numCounter__title text-dark text-lg">活動</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="row justify-center text-center">
+                <div class="col-xl-8 col-lg-7">
+                  <div class="sectionHeading__subtitle">
+                    <span>專案反思</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">將複雜轉化為清晰</h2>
+                    <p class="y-gap-16 pt-24 text-left">除了這些指標之外，這個專案教會我，為 B2B 設計不僅僅是關於介面——而是在提出解決方案之前深入理解營運工作流程。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>從功能到系統</b></p>
+                    <p class="y-gap-16 pt-12 text-left">設計這個平台教會我，有效的 B2B 產品不僅僅是關於功能；它們是關於協調複雜的工作流程。透過將零散的手動任務轉化為統一的「閉環」系統，我學會了如何識別營運瓶頸並透過設計來解決它們。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>透過數據可見性賦能決策</b></p>
+                    <p class="y-gap-16 pt-12 text-left">最大的挑戰是讓不可見的學習缺口變得可見。我意識到，儀表板要真正有用，必須超越顯示數據，進而觸發行動。設計這些分析介面磨練了我為不同角色（管理員/教師/學生）優先排序資訊層次的能力，確保使用者能夠立即檢測到異常並採取行動。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Results & Impact -->
+
+      <div class="layout-pt-md"></div>
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="visuals_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">品牌與行銷素材</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="im_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">客服即時通訊系統</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

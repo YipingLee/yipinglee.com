@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+
+
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="ilife.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">I-Life 網站重新設計</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">I-Life 是一個社會企業，透過劇場和社區服務為弱勢青少年提供第二次機會。他們的網站需要重新設計，以更好地傳達他們的使命、吸引捐助者，並為青少年團員創造歸屬感。</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">角色</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>UX 設計師</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">裝置</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>網站</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">工具</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma、Miro 和 Notion</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">時間</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>2021年7月 - 2021年9月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/i_life/ilife_banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">背景</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text"><b>I-Life</b>成立於2015年，是台灣的一個社會企業，致力於幫助處於風險中的青少年（如輟學者、前幫派成員、邊緣家庭的孩子）透過戲劇表演和社區服務重建自信和社會連結。</p>
+                  <p class="page-header__text pt-24">然而，他們的網站未能有效傳達組織的影響力和情感故事：</p>
+                  <ul class="ul-list pt-12">
+                    <li class=""><b>缺乏情感共鳴：</b>網站內容過於機構化，未能展現青少年團員的個人故事和轉變歷程</li>
+                    <li class=""><b>捐款流程不明確：</b>潛在捐助者難以理解他們的捐款如何直接幫助青少年</li>
+                    <li class=""><b>資訊過載：</b>首頁塞滿了大量文字和活動資訊，導致使用者難以聚焦</li>
+                    <li class=""><b>缺乏社群感：</b>青少年團員和支持者沒有感受到與組織的連結</li>
+                  </ul>
+                  <p class="page-header__text pt-24">我們的目標是重新設計網站，以真實的故事講述、清晰的行動呼籲和強烈的社群感來激發同理心和行動。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">設計挑戰</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">如何在不過度煽情的情況下，透過設計傳達青少年團員的真實故事和轉變？</li>
+                    <li class="">如何設計一個清晰且具說服力的捐款流程，讓捐助者理解他們的影響？</li>
+                    <li class="">如何平衡多元使用者需求：潛在捐助者、青少年團員、合作夥伴和社區成員？</li>
+                    <li class="">如何在有限的預算和時間（3個月）內完成完整的 UX 研究和設計？</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">我的角色</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">作為 UX 設計師，我負責從研究到設計的完整流程，包括：</p>
+                  <ul class="ul-list pt-12">
+                    <li class="">進行使用者訪談和競品分析</li>
+                    <li class="">定義使用者旅程和資訊架構</li>
+                    <li class="">設計線框圖和高保真原型</li>
+                    <li class="">與工程團隊和利益相關者協作</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-lg"></div>
+      
+      <!-- Discover & Define -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>探索與定義</span>
+                </div>
+                <h2 class="sectionHeading__title">理解使用者與他們的需求</h2>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-lg-10">
+              <div class="sectionHeading">
+                <p class="ty-gap-16 pt-24 text-left">為了深入理解I-Life的使用者和他們的需求，我們採用了雙鑽石設計模型（Double Diamond Design Model）進行設計研究：</p>
+              </div>
+              <div class="col-12 layout-pt-xs">
+                <img class="initial-img" src="img/projects/i_life/double_diamond_model.png" alt="image">
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-lg-10">
+              <div class="sectionHeading text-left">
+                <h3 class="sectionHeading__title">🔍 發現階段：我們如何做</h3>
+                <p class="ty-gap-16 pt-24">我們透過多種方法收集洞察：</p>
+              </div>
+              <div class="col-12 layout-pt-xs">
+                <img class="initial-img" src="img/projects/i_life/how_we_do.png" alt="image">
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <!-- User Persona -->
+            <div class="col-lg-10">
+              <div class="sectionHeading text-left">
+                <h3 class="sectionHeading__title">👥 使用者角色</h3>
+                <p class="ty-gap-16 pt-24">透過訪談和分析，我們識別出三個主要使用者類型：</p>
+              </div>
+              <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/user_1.png" class="initial-img">
+                    <h4 class="text-xl fw-600 lh-1 mt-20">捐助者</h4>
+                    <p class="mt-12 text-left">「我想知道我的捐款如何實際幫助這些年輕人，並看到真實的改變故事。」</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/user_2.png" class="initial-img">
+                    <h4 class="text-xl fw-600 lh-1 mt-20">青少年團員</h4>
+                    <p class="mt-12 text-left">「我希望這裡是一個讓我感到被接納和驕傲的地方，而不僅僅是另一個社福機構。」</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/user_3.png" class="initial-img">
+                    <h4 class="text-xl fw-600 lh-1 mt-20">合作夥伴</h4>
+                    <p class="mt-12 text-left">「我想快速了解組織的使命和如何與他們合作舉辦活動或提供資源。」</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <!-- POV & HMW -->
+            <div class="col-lg-10">
+              <div class="sectionHeading text-left">
+                <h3 class="sectionHeading__title">💡 觀點（POV）與我們可以如何...（HMW）</h3>
+                <p class="ty-gap-16 pt-24">基於研究發現，我們為每個使用者角色制定了 POV 和 HMW 陳述：</p>
+              </div>
+              <div class="col-12 layout-pt-xs">
+                <img class="initial-img" src="img/projects/i_life/pov_1.png" alt="image">
+              </div>
+              <div class="col-12 layout-pt-sm">
+                <img class="initial-img" src="img/projects/i_life/pov_2.png" alt="image">
+              </div>
+              <div class="col-12 layout-pt-sm">
+                <img class="initial-img" src="img/projects/i_life/pov_3.png" alt="image">
+              </div>
+              <div class="col-12 layout-pt-sm">
+                <img class="initial-img" src="img/projects/i_life/hmw.png" alt="image">
+              </div>
+            </div>
+
+            <div class="pt-60"></div>
+
+          </div>
+        </div>
+      </section>
+      <!-- End of Discover & Define -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Design Solution -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>設計解決方案</span>
+                </div>
+                <h2 class="sectionHeading__title">從資訊過載到故事驅動的體驗</h2>
+                <p class="y-gap-16 pt-24">我們採用了以故事為中心的設計策略——透過真實的青少年故事、清晰的視覺層次和情感化設計，讓訪客與I-Life的使命產生深刻連結。</p>
+              </div>
+            </div>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 1：缺乏情感共鳴的首頁</h5>
+                  </div>
+                  <div class="col-12 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">原網站首頁充滿大量文字和活動資訊，缺乏視覺焦點</li>
+                      <li class="">未能展現青少年團員的個人故事和轉變歷程</li>
+                      <li class="">行動呼籲（CTA）不明確，訪客不知道下一步該做什麼</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>之前：資訊過載，缺乏焦點</b></p>
+                    <img src="img/projects/i_life/storytelling_before.png" alt="image" class="initial-img pt-12">
+                    <p class="y-gap-16 pt-24"><b>解決方案：以故事為中心的首頁重新設計</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>英雄區塊（Hero Section）：</b>使用大尺寸的青少年團員照片和簡短有力的標語「給孩子第二次機會」，立即建立情感連結</li>
+                      <li class=""><b>故事卡片：</b>在首頁展示 2-3 個精選的青少年轉變故事，搭配真實照片和簡短引言</li>
+                      <li class=""><b>清晰的 CTA：</b>兩個主要行動按鈕：「了解更多」和「立即支持」，引導不同意圖的訪客</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>之後：清晰的焦點，情感化敘事</b></p>
+                    <img src="img/projects/i_life/storytelling_after.png" alt="image" class="initial-img pt-12">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 2：捐款流程不明確，缺乏信任</h5>
+                  </div>
+                  <div class="col-12 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">捐助者不清楚他們的捐款將如何被使用</li>
+                      <li class="">捐款選項過於單一，沒有提供不同的支持方式</li>
+                      <li class="">缺乏透明度和問責機制，降低了信任感</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案：透明且具說服力的捐款體驗</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>物資捐贈地圖：</b>創建互動式地圖，展示I-Life的服務據點和物資需求清單，讓捐助者可以選擇捐贈特定物資（如戲劇道具、教學設備）</li>
+                      <li class=""><b>多元支持方式：</b>除了金錢捐款，還提供「物資捐贈」、「志工參與」和「企業合作」等選項</li>
+                      <li class=""><b>影響力儀表板：</b>顯示捐款如何直接轉化為實際行動（如「您的 1000 元可以支持一位青少年參加一個月的戲劇課程」）</li>
+                    </ul>
+                    <div class="row y-gap-32 pt-24">
+                      <div class="col-12">
+                        <img src="img/projects/i_life/material_donation.png" alt="image" class="initial-img">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 3：缺乏社群感和歸屬感</h5>
+                  </div>
+                  <div class="col-12 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">青少年團員沒有專屬的空間展示他們的成就和故事</li>
+                      <li class="">支持者和捐助者與組織的連結僅限於捐款，缺乏持續互動</li>
+                      <li class="">沒有平台讓社群成員相互交流和支持</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案：建立線上社群平台</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>團員故事牆：</b>創建專區展示青少年團員的個人故事、作品和成長歷程</li>
+                      <li class=""><b>部落格與媒體報導：</b>定期更新組織動態、演出資訊和媒體專訪，保持社群活躍度</li>
+                      <li class=""><b>社交媒體整合：</b>在網站嵌入 Instagram 和 Facebook 動態，鼓勵訪客關注並參與線上討論</li>
+                    </ul>
+                    <div class="row y-gap-32 pt-24">
+                      <div class="col-md-6">
+                        <img src="img/projects/i_life/blog.png" alt="image" class="initial-img">
+                      </div>
+                      <div class="col-md-6">
+                        <img src="img/projects/i_life/media.png" alt="image" class="initial-img">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+      <!-- End of Design Solution -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Storytelling Strategy -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>敘事策略</span>
+                </div>
+                <h2 class="sectionHeading__title">透過設計講述有力的故事</h2>
+                <p class="y-gap-16 pt-24">我們設計了一套完整的視覺敘事系統，讓每個頁面都能傳達I-Life的使命和影響力。</p>
+              </div>
+            </div>
+            <div class="col-12 layout-pt-xs">
+              <img class="initial-img" src="img/projects/i_life/storytelling.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Storytelling Strategy -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Testing & Iteration -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>測試與迭代</span>
+                </div>
+                <h2 class="sectionHeading__title">與真實使用者一起驗證設計</h2>
+                <p class="y-gap-16 pt-24">我們與I-Life的工作人員、青少年團員和潛在捐助者進行了可用性測試，以驗證設計假設並收集回饋。</p>
+              </div>
+              <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/testing_1.jpeg" class="initial-img rounded-8">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/testing_2.jpeg" class="initial-img rounded-8">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="text-center">
+                    <img src="img/projects/i_life/testing_3.jpeg" class="initial-img rounded-8">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Testing & Iteration -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Design Guideline -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>設計指南</span>
+                </div>
+                <h2 class="sectionHeading__title">建立一致且可擴展的設計系統</h2>
+              </div>
+            </div>
+            <div class="col-12 layout-pt-xs">
+              <img class="initial-img" src="img/projects/i_life/guideline.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Design Guideline -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Final Screens -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>最終設計</span>
+                </div>
+                <h2 class="sectionHeading__title">完整的響應式網頁設計</h2>
+              </div>
+            </div>
+            
+            <!-- Mobile Screens -->
+            <div class="layout-pt-sm"></div>
+            <div class="col-12">
+              <h3 class="text-2xl fw-600">手機版</h3>
+            </div>
+            <div class="row y-gap-32 pt-24">
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_1.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_2.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_3.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_4.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_5.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_6.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_7.png" alt="image" class="initial-img rounded-8">
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <img src="img/projects/i_life/mobile_8.png" alt="image" class="initial-img rounded-8">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Final Screens -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Impact & Reflection -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>影響與反思</span>
+                </div>
+                <h2 class="sectionHeading__title">設計帶來的改變</h2>
+                <p class="y-gap-16 pt-24">重新設計的網站不僅改善了使用者體驗，還實際幫助I-Life擴大了社會影響力。</p>
+              </div>
+
+              <section class="layout-pb-lg">
+                <div class="container">
+                  <div data-anim="slide-up delay-2" class="row y-gap-48">
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="150">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">150%</div>
+                        <h5 class="numCounter__title text-dark text-lg">增加網站流量</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="85">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">85%</div>
+                        <h5 class="numCounter__title text-dark text-lg">提升捐款轉換率</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="200">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">200+</div>
+                        <h5 class="numCounter__title text-dark text-lg">新增志工註冊</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="row justify-center text-center">
+                <div class="col-xl-8 col-lg-7">
+                  <div class="sectionHeading__subtitle">
+                    <span>專案反思</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">同理心驅動的設計創造真正的影響</h2>
+                    <p class="y-gap-16 pt-24 text-left">這個專案教會我，為社會企業設計不僅僅是關於美觀的介面——而是關於透過設計放大組織的使命和影響力。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>故事講述是最強大的設計工具</b></p>
+                    <p class="y-gap-16 pt-12 text-left">透過與I-Life的工作人員和青少年團員深入訪談，我意識到真實的故事比任何設計技巧都更有力量。設計的角色是放大這些故事，而不是掩蓋它們。我學會了如何使用視覺層次、排版和圖像來創造情感共鳴，而不過度設計。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>在有限資源下平衡理想與現實</b></p>
+                    <p class="y-gap-16 pt-12 text-left">作為一個非營利組織，I-Life的預算和時間都非常有限。我學會了如何在理想的設計願景和實際的技術和預算限制之間取得平衡。透過優先排序關鍵功能（如捐款流程和故事展示）並採用漸進式改進策略，我們能夠在有限資源內創造最大影響。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>設計可以是社會改變的催化劑</b></p>
+                    <p class="y-gap-16 pt-12 text-left">看到重新設計的網站實際幫助I-Life吸引更多捐助者和志工，讓我深刻體會到設計的社會價值。這個專案讓我更加堅信，好的設計不僅能解決商業問題，更能為弱勢群體發聲，創造更包容和公平的社會。</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quote from CEO -->
+              <div class="layout-pt-md"></div>
+              <div class="row justify-center">
+                <div class="col-xl-8 col-lg-10">
+                  <div class="bg-white border-light rounded-16 shadow-card p-40">
+                    <img src="img/projects/i_life/quote_ceo.png" alt="CEO Quote" class="initial-img">
+                    <p class="text-lg mt-24 text-left"><i>「新網站幫助我們更有效地傳達我們的故事和影響力。我們收到更多來自企業和個人捐助者的詢問，許多人說他們被網站上的故事所感動。這對我們來說是巨大的突破。」</i></p>
+                    <p class="text-md fw-600 mt-16 text-left">— 成瑋盛，I-Life創辦人兼執行長</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quote from User -->
+              <div class="layout-pt-sm"></div>
+              <div class="row justify-center">
+                <div class="col-xl-8 col-lg-10">
+                  <div class="bg-white border-light rounded-16 shadow-card p-40">
+                    <img src="img/projects/i_life/quote_user.png" alt="User Quote" class="initial-img">
+                    <p class="text-lg mt-24 text-left"><i>「以前我只是偶爾捐款，但新網站讓我真正了解這些年輕人的故事。現在我成為了定期捐助者，還報名參加了志工活動。」</i></p>
+                    <p class="text-md fw-600 mt-16 text-left">— 陳小姐，定期捐助者</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Impact & Reflection -->
+
+      <div class="layout-pt-md"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="video-platform_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">串流服務平台重新設計</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="visuals_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">品牌與行銷素材</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

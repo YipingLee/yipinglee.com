@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+
+
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="messaging-service.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">即時通訊服務</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">重新設計補習班的即時通訊功能。此功能讓學生、家長和教師能夠相互聯繫、提問、分享資源並保持聯繫。</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">角色</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>UI/UX 設計主管</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">裝置</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>應用程式與網站</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">工具</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">發布日期</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>2023年3月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/messaging_service/banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">背景</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">原有的即時通訊系統最初是為了學生和教師之間的基本課程問答而建立的。然而，隨著平台的發展，出現了新的需求：</p>
+                  <ul class="ul-list pt-12">
+                    <li class=""><b>角色混淆：</b>家長也需要與教師溝通，但系統最初並未為他們設計</li>
+                    <li class=""><b>會話過載：</b>使用者管理大量的個人聊天對話變得困難</li>
+                    <li class=""><b>有限的群組協作：</b>沒有有效的方式來創建專案小組或班級討論群組</li>
+                    <li class=""><b>內容控制問題：</b>學校管理員無法監督或管理不當內容</li>
+                  </ul>
+                  <p class="page-header__text pt-24">為了解決這些挑戰，我們重新設計了即時通訊系統，以適應教育環境中更複雜的溝通需求。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">主要挑戰</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">為三種不同的使用者角色（學生、家長、教師）設計統一但有差異的體驗</li>
+                    <li class="">在保持即時性的同時，創建可擴展的聊天介面來管理 100+ 個會話</li>
+                    <li class="">實施學校管理員的內容管理功能，同時尊重隱私</li>
+                    <li class="">確保行動應用程式和網頁版本之間的功能對等和設計一致性</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">解決方案</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">支援多種溝通模式：個人聊天、群組對話、公告頻道</li>
+                    <li class="">為不同角色設計差異化介面（學生看到簡化視圖，教師看到班級管理功能）</li>
+                    <li class="">建立強大的搜尋和篩選系統來管理大量會話</li>
+                    <li class="">實施管理員的內容管理工具和不當內容報告機制</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-lg"></div>
+
+      <!-- Strategy -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>設計策略</span>
+                </div>
+                <h2 class="sectionHeading__title">從簡單聊天到協作中樞</h2>
+                <p class="y-gap-16 pt-24">我們採用了分層溝通設計——為不同情境創建不同的空間（快速問題、深入討論、公告），同時保持統一的介面語言。</p>
+              </div>
+            </div>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 1：會話混亂與資訊過載</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">使用者有太多個人聊天對話，難以找到特定會話</li>
+                      <li class="">重要訊息淹沒在一般聊天中</li>
+                      <li class="">沒有區分緊急訊息和常規訊息的方式</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>分類標籤系統：</b>將會話組織為類別（課程、專案、一般），讓使用者快速導航</li>
+                      <li class=""><b>置頂對話：</b>讓使用者能夠將重要對話釘選在清單頂部</li>
+                      <li class=""><b>強大的搜尋功能：</b>按姓名、關鍵字或日期範圍搜尋訊息</li>
+                      <li class=""><b>未讀徽章：</b>清楚標示哪些會話有新訊息，幫助使用者優先處理</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/messaging_service/conversation_management.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 2：缺乏群組協作功能</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">學生需要為小組專案創建臨時群組，但系統不支援</li>
+                      <li class="">教師想要為整個班級發送公告，但只能進行一對一對話</li>
+                      <li class="">沒有共享檔案或多媒體內容的方式</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>群組聊天功能：</b>使用者可以創建多人群組對話，並為專案或班級命名</li>
+                      <li class=""><b>公告頻道：</b>教師可以創建單向廣播頻道來發布重要更新</li>
+                      <li class=""><b>多媒體支援：</b>允許分享圖片、文件和連結，讓協作更豐富</li>
+                      <li class=""><b>角色權限：</b>群組管理員可以控制誰能發布、誰只能閱讀</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/messaging_service/group_collaboration.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 3：內容管理與安全性</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class="">學校管理員無法監督平台上的不當內容</li>
+                      <li class="">沒有機制讓使用者報告騷擾或不當行為</li>
+                      <li class="">隱私問題：需要在安全和監督之間取得平衡</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list pt-12 text-left">
+                      <li class=""><b>報告機制：</b>使用者可以直接從聊天中標記不當訊息，自動通知管理員</li>
+                      <li class=""><b>管理員儀表板：</b>學校管理員可以查看被報告的內容並採取行動（警告、暫停帳號）</li>
+                      <li class=""><b>自動關鍵字過濾：</b>系統自動偵測並標記可能不當的內容</li>
+                      <li class=""><b>透明的隱私政策：</b>明確告知使用者什麼內容會被監控，什麼保持私密</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/messaging_service/content_moderation.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+      <!-- End of Strategy -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Design System -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">跨平台設計系統</h2>
+                <p class="y-gap-16 pt-24">為了確保行動應用程式和網頁版本之間的一致性，我們建立了一套可重複使用的元件和設計模式。</p>
+              </div>
+            </div>
+            <div class="col-12 layout-pt-xs">
+              <img class="initial-img" src="img/projects/messaging_service/design_system.png" alt="image">
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Design System -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Impact -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>成果與反思</span>
+                </div>
+                <h2 class="sectionHeading__title">增強溝通，建立社群</h2>
+                <p class="y-gap-16 pt-24">重新設計的即時通訊系統不僅改善了溝通效率，還創造了更強大的學習社群。</p>
+              </div>
+
+              <section class="layout-pb-lg">
+                <div class="container">
+                  <div data-anim="slide-up delay-2" class="row y-gap-48">
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="78">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">78%</div>
+                        <h5 class="numCounter__title text-dark text-lg">提升使用者參與度</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="65">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">65%</div>
+                        <h5 class="numCounter__title text-dark text-lg">減少教師回應時間</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 col-6">
+                      <div class="numCounter" data-anim="counter" data-counter="3">
+                        <div class="numCounter__number text-3xl text-dark-1 fw-700 js-counter-num">3x</div>
+                        <h5 class="numCounter__title text-dark text-lg">群組對話增長</h5>
+                        <div class="numCounter__line mt-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="row justify-center text-center">
+                <div class="col-xl-8 col-lg-7">
+                  <div class="sectionHeading__subtitle">
+                    <span>專案反思</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">溝通設計是關於脈絡，而非功能</h2>
+                    <p class="y-gap-16 pt-24 text-left">這個專案教會我，有效的訊息系統不僅僅是複製 WhatsApp 或 Slack——而是深入理解使用者的溝通脈絡。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>為多種角色設計</b></p>
+                    <p class="y-gap-16 pt-12 text-left">學生、家長和教師有完全不同的溝通需求。學生需要快速、非正式的小組聊天；教師需要結構化的公告工具；家長需要清晰、有組織的更新。我學會了如何為不同的使用者角色量身定制複雜性，同時保持統一的視覺語言。</p>
+                    <p class="y-gap-16 pt-24 text-left"><b>在功能和簡潔之間取得平衡</b></p>
+                    <p class="y-gap-16 pt-12 text-left">最大的挑戰是加入群組聊天、檔案分享和內容管理，而不讓介面變得混亂。透過分層資訊架構和智慧預設值，我學會了如何在幕後提供強大的功能，只在使用者需要時才顯示進階選項。</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Impact -->
+
+      <div class="layout-pt-md"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="gaming_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">遊戲平台</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="oneanswer_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">即時解答功能</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

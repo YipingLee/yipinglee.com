@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content">
+
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <!-- hi -->
+      <div class="content-wrapper  js-content-wrapper ">
+        <section class="layout-pt-sm layout-pb-lg">
+          <div data-anim-wrap class="container">
+            <div class="row y-gap-40 justify-between items-center">
+              <div data-anim-child="slide-up delay-2" class="col-xl-4 col-lg-5 col-md-6 order-lg-1 order-2">
+                <div class="sectionHeading ">
+                  <h2 class="sectionHeading__title">我是<br> 李翊萍 (Phoebe)</h2>
+                </div>
+                <div class="mt-30">
+                  <p>我喜歡透過引人入勝的設計解決方案來解決問題，我一直期待設計是如何有能力改變我們的世界，無論是透過簡化一個互動，還是為使用者提供從新角度看待事物的機會。</p>
+                </div>
+              </div>
+              <div data-anim-child="scale delay-1" class="col-xl-7 col-lg-7 col-md-5 order-lg-2 order-1">
+                <img class="initial-img" src="img/hi.gif" alt="image">
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end of hi -->
+
+        <!-- what i do -->
+        <section class="layout-pt-lg layout-pb-lg section-bg-color">
+          <div class="section-bg-color__item -full rounded-0 bg-light-4"></div>
+          <div class="container">
+            <div class="row justify-center text-center">
+              <div class="col-xl-6 col-lg-7">
+                <div class="sectionHeading ">
+                  <h2 class="sectionHeading__title">我的專長</h2>
+                </div>
+              </div>
+            </div>
+
+            <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+              <div data-anim-child="slide-up delay-1" class="col-lg-4 col-md-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_1.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">UI/UX 設計</h4>
+                    <p class="mt-10">充分的前端和後端知識使我能夠掌控專案並獨立完成設計。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-anim-child="slide-up delay-2" class="col-lg-4 col-sm-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_2.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">視覺識別</h4>
+                    <p class="mt-10">對設計準則有清晰的理解，我既可以創建準則，也可以在現有品牌風格中發展，展現它們的創意特色。</p>
+                  </div>
+                </div>
+              </div>
+
+              <div data-anim-child="slide-up delay-3" class="col-lg-4 col-sm-6">
+                <div class="px-24 text-center">
+                  <div class="d-flex justify-center items-center size-120 mx-auto rounded-full | hg:bg-blue-dark t-base">
+                    <img src="img/what_i_do_3.svg">
+                  </div>
+                  <div class="mt-30">
+                    <h4 class="text-xl lh-12">行銷素材</h4>
+                    <p class="mt-10">設計並交付各種創意素材，包括但不限於：傳單、手冊、Banner、產品頁面等。</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- end of what i do -->
+
+        <!-- footer -->
+        <div class="svg-shape">
+          <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+          </svg>
+        </div>
+        <footer class="footer -type-1 bg-dark-1">
+          <div class="container bg-dark-1">
+            <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+              <div class="col-md-auto">
+                <div class="footer__right text-white">
+                  <span class="footer__copyright text-white">
+                    Copyright © 2025 Yiping Lee
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-md-auto">
+                <div class="footer__right">
+                  <div class="footer__socials socials sm:justify-center">
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="about-1.html" class="socials__item text-dark-1">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- End of footer -->
+
+      </div>
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

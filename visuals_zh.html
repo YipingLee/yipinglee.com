@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="visuals.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">品牌與行銷素材</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">從企業識別系統和行銷活動素材到手冊、社群媒體貼文和簡報模板。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Branding -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>品牌設計</span>
+                </div>
+              </div>
+            </div>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between">
+                        <div class="sectionHeading col-xl-4 col-lg-6 order-lg-1 order-1">
+                          <h2 class="sectionHeading__title text-center">公司周邊</h2>
+                        </div>
+                        <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                          <img class="max-w-100" src="img/projects/visuals/stationery_optimi_1.png" alt="image">
+                          <img class="max-w-100" src="img/projects/visuals/stationery_optimi_2.png" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <section class="layout-pt-sm layout-pb-lg">
+                    <div class="container">
+                      <div class="row y-gap-32 justify-between">
+                        <div class="sectionHeading col-xl-4 col-lg-6 order-lg-1 order-1">
+                          <h2 class="sectionHeading__title text-center">簡報模板</h2>
+                        </div>
+                        <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                          <img class="max-w-100" src="img/projects/visuals/pitch_deck-1.png" alt="image">
+                          <img class="max-w-100" src="img/projects/visuals/slide_deck_templates_oneclass.png" alt="image">
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="order-lg-1 order-1 text-center">
+                    <div class="sectionHeading">
+                      <h2 class="sectionHeading__title text-center">DM</h2>
+                    </div>
+                  </div>
+                  <section class="order-2">
+                    <div class="container">
+                      <div data-anim-wrap class="row y-gap-48 pt-20">
+                        <div data-anim-child="slide-up delay-1" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <img class="max-w-100" src="img/projects/visuals/flyer_oneclass.png" alt="image">
+                          </div>
+                        </div>
+                        <div data-anim-child="slide-up delay-2" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <img class="max-w-100" src="img/projects/visuals/flyer_mandala.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- End of Branding -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Marketing -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>行銷素材</span>
+                </div>
+              </div>
+            </div>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading col-xl-4 col-lg-6 order-lg-1 order-1">
+                    <h2 class="sectionHeading__title text-center">課表</h2>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/visuals/group_class_schedule.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading col-xl-4 col-lg-6 order-lg-1 order-1">
+                    <h2 class="sectionHeading__title text-center">Banner</h2>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/visuals/banner_tci.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading col-xl-4 col-lg-6 order-lg-1 order-1">
+                    <h2 class="sectionHeading__title text-center">Instagram 貼文</h2>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/visuals/instagram_post.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- End of Marketing -->
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="ilife_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">I-Life 官網重新設計</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="onelink_plus_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">學習管理平台 (SaaS)</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

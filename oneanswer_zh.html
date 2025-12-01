@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+
+
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="oneanswer.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">即時解答功能</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">若學生和家長在自學過程中遇到問題，可隨時向老師進行一對一對話解答，老師也能藉此增加收入。系統會記錄問題、計算教師報酬，並包含評價機制。</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">角色</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>UI/UX 設計主管</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">裝置</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>應用程式與網站</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">工具</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">發布日期</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>2024年1月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/oneanswer/banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">主要挑戰</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">在一個月內完成 MVP 發布</li>
+                    <li class="">為多個裝置和產品進行設計</li>
+                    <li class="">管理複雜的工作流程，同時考慮不同產品、裝置和使用者角色</li>
+                    <li class="">規劃完整流程和情境，包括家長如何提交問題、教師評估和薪資計算</li>
+                    <li class="">考慮不同科目教師解題所需的各種工具</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">解決方案</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <ul class="ul-list y-gap-16">
+                    <li class="">優先順序與簡化開發：專注於核心功能，簡化開發流程以符合時程</li>
+                    <li class="">無縫功能整合：確保新功能順利整合至教師和家長網頁與 App，提升易用性</li>
+                    <li class="">情境化使用者流程與角色：根據不同角色設計詳細的使用者流程，並確保跨裝置互動的一致性</li>
+                    <li class="">端到端流程規劃：建立從問題提交到評估的完整流程圖，為未來更新奠定基礎</li>
+                    <li class="">AI 輔助與白板記錄：AI 提供教師答題建議，並整合白板功能記錄解題過程供學生或家長日後回顧</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="layout-pt-lg"></div>
+
+      <!-- flow -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+
+                <!-- Parent Question Submission -->
+                <section class="layout-pt-sm layout-pb-sm">
+                  <div class="container">
+                    <div class="row justify-center text-center">
+                      <div class="col-xl-8 col-lg-7">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">家長提問</h2>
+                          <p class="sectionHeading__text mt-20">家長可拍照或直接上傳作業與考試中不理解的部分，透過 App 提交問題。</p>                          
+                        </div>
+                      </div>
+                    </div>
+                    <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                      <div data-anim-child="slide-up delay-1" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/question_submission_1.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/question_submission_2.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/question_submission_3.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/question_submission_4.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Teacher question-solving -->
+                <section class="layout-pt-sm layout-pb-sm">
+                  <div class="container">
+                    <div class="row justify-center text-center">
+                      <div class="col-xl-8 col-lg-7">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">教師解答</h2>
+                          <p class="sectionHeading__text mt-20">學生與家長送出問題後，教師可在清單上看到符合此教師學制與科目的單並透過一對一對話解答問題。在老師根據學生與家長的提問詳細說明後，教師可以申請結束此單。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                      <div data-anim-child="slide-up delay-1" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/teacher_question-solving_1.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/teacher_question-solving_2.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/teacher_question-solving_3.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/teacher_question-solving_4.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Whiteboard Solution Recording -->
+                <section class="layout-pt-sm layout-pb-sm">
+                  <div class="container">
+                    <div class="row justify-center text-center">
+                      <div class="col-xl-8 col-lg-7">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">白板解題記錄</h2>
+                          <p class="sectionHeading__text mt-20">教師可使用白板功能記錄解題過程。這種解題方式不僅有助於為學生或家長說明解題過程，還可以錄製內容供學生或家長日後學習。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                      <div data-anim-child="slide-up delay-1" class="col-md-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center">
+                            <img class="max-w-100" src="img/projects/oneanswer/whiteboard_recording_1.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-2" class="col-md-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center">
+                            <img class="max-w-100" src="img/projects/oneanswer/whiteboard_recording_2.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <!-- Parent Feedback and Closure -->
+                <section class="layout-pt-sm layout-pb-sm">
+                  <div class="container">
+                    <div class="row justify-center text-center">
+                      <div class="col-xl-8 col-lg-7">
+                        <div class="sectionHeading">
+                          <h2 class="sectionHeading__title">家長回饋與結案</h2>
+                          <p class="sectionHeading__text mt-20">問題解答完成後，家長可以選擇結束此問題並對教師的解題提供回饋。此回饋有助於主管了解學生與家長對於此單的滿意度與該教師的答題品質。</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                      <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/parent_feedback_and_closure_1.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/parent_feedback_and_closure_2.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/parent_feedback_and_closure_3.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                        <div class="text-center hover-group">
+                          <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                            <img class="max-w-100" src="img/projects/oneanswer/parent_feedback_and_closure_4.png" alt="image">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Flow -->
+
+      <div class="layout-pt-lg"></div>
+
+      <!-- Back-end -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading">
+                  <h2 class="sectionHeading__title">後台管理</h2>
+                  <p class="sectionHeading__text mt-20">後台會記錄所有的問答紀錄，以便日後查詢與參考。</p>
+                </div>
+
+                <section class="layout-pt-sm layout-pb-lg">
+                  <div class="container">
+                    <div class="row y-gap-32">
+
+                      <div class="col-12">
+                        <img class="initial-img" src="img/projects/oneanswer/back-end.png" alt="image">
+                      </div>
+      
+        
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end of Back-end -->
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="im_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">家長即時通訊系統</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="video-platform_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">串流服務平台重新設計</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

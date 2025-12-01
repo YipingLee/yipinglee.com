@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/vendors.css">
+  <link rel="stylesheet" href="css/main.css">
+  <title>李翊萍作品集</title>
+  <meta name="description" content="李翊萍（Phoebe）是一位 UI/UX 設計師，熱衷於透過引人入勝的設計方案解決問題。">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
+  <!-- microsoft clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "er5488qzcy");
+  </script>
+</head>
+
+
+<body class="" data-barba="wrapper">
+
+  <!-- preloader start -->
+  <div class="preloader js-preloader"></div>
+  <!-- preloader end -->
+
+  <!-- cursor start -->
+  <div class="cursor js-cursor">
+    <div class="cursor__wrapper">
+      <div class="cursor__follower js-follower"></div>
+      <div class="cursor__label js-label"></div>
+      <div class="cursor__icon js-icon"></div>
+      <div class="cursor__slider_icon js-slider-icon">
+        <svg width="52" height="24" viewBox="0 0 52 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M37 18L43 12L37 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M15 18L9 12L15 6" stroke="white" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
+  <!-- cursor end -->
+
+
+  <!-- barba container start -->
+  <div class="barba-container" data-barba="container">
+    <main class="main-content  ">
+      <!-- header start -->
+      <header class="header -container js-header">
+        <div class="header__bar js-header-bar">
+          <div class="container">
+            <div class="row justify-between items-center">
+              <div class="col-2">
+                <div class="header__logo">
+                  <a class="base-logo" data-barba href="index_zh.html">
+                    <img class="base-logo-first" src="img/logo-3.svg" alt="logo">
+                    <img class="base-logo-second" src="img/logo-3.svg" alt="logo">
+                  </a>
+                  <a class="menu-logo" data-barba href="index_zh.html">
+                    <img src="img/logo-3.svg" alt="logo">
+                  </a>
+                </div>
+              </div>
+              <div class="col-auto">
+                <div class="header__right d-flex items-center">
+                  <div class="">
+                    <div class="menu js-menu">
+                      <div class="mobile__background js-mobile-bg"></div>
+                      <div class="menu__container">
+                        <div class="mobile__back js-nav-list-back pointer-events-none">
+                          <a data-barba href="#">首頁</a>
+                        </div>
+                        <ul class="nav js-navList">
+                          <li class="">
+                            <a data-barba href="index_zh.html#projects">作品集</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="about_zh.html">關於我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="mailto:yiping.lee012@gmail.com">聯絡我</a>
+                          </li>
+                          <li class="">
+                            <a data-barba href="im.html">English</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mobile__footer js-mobile-footer">
+                        <div class="mobile__copyright">
+                          <p>Copyright © 2025 Yiping Lee</p>
+                        </div>
+
+                        <div class="mobile__socials">
+                          <a data-barba href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                          </a>
+                          <a data-barba href="#">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header__menu justify-center items-center relative d-none md:d-flex">
+                    <button type="button" class="d-flex items-center justify-center js-nav-open">
+                      <i class="text-black size-32 str-width-1" data-feather="menu"></i>
+                    </button>
+                    <button type="button" class="d-flex items-center justify-center absolute-y-center right-0 pointer-events-none opac-0 js-nav-close">
+                      關閉
+                      <i class="text-black size-32 str-width-1 ml-4" data-feather="x"></i>
+                    </button>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header end -->
+
+      <section class="page-header -text -">
+        <div class="container">
+          <div class="page-header__content">
+            <div class="row justify-between">
+              <div class="col-xl-6 col-lg-7 col-md-10">
+                <div data-anim="slide-up">
+                  <h1 class="page-header__title lh-14">客服即時通訊系統</h1>
+                </div>
+                <div data-anim="slide-up delay-2" class="mt-4">
+                  <p class="page-header__text layout-pb-md">整合客服、輔導和輔導角色，我們打造了一個面向家長的即時通訊系統，大幅提升溝通透明度和效率。</p>
+                </div>
+              </div>
+              
+              <div class="col-xl-4 col-lg-5 col-md-10">
+                <div class="row x-gap-32 y-gap-40">
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">角色</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>設計主管</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">裝置</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>網頁、iOS 和 Android</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">工具</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>Figma、Illustrator、Photoshop、Miro 和 Notion</p>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <h5 class="text-xl fw-600">發布日期</h5>
+                    <div class="y-gap-4 mt-12">
+                      <p>2024年5月</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="layout-pt-md"></div>
+
+        <section data-parallax="0.7" class="ratio ratio-16:9">
+          <div data-parallax-target class="bg-image js-lazy" data-bg="img/projects/im/banner.png"></div>
+        </section>
+
+      <div class="layout-pt-md"></div>
+
+      <section class="layout-pt-sm layout-pb-sm">
+        <div class="container">
+          <div class="row y-gap-64">
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">背景</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">在推出此系統之前，我們在家長與內部的溝通中面臨持續性問題：零散的訊息、不斷在平台之間切換、客服與輔導之間角色模糊，以及耗時且容易出錯的手動訊息轉發。</p>
+                  <ul class="ul-list pt-12">
+                    <li class=""><b>零散的溝通管道：</b>家長和輔導經常使用 3 種以上不同的私人通訊應用程式（LINE、WhatsApp 和 WeChat），讓對話難以追蹤和記錄</li>
+                    <li class=""><b>低效的工作時數：</b>輔導每週花費 100 多分鐘手動轉發訊息——這些時間本應專注於他們的核心職責</li>
+                    <li class=""><b>不明確的角色：</b>約 50% 的家長繞過客服直接與輔導聯繫，造成所有權混亂，使得請假期間的交接變得混亂且充滿壓力</li>
+                  </ul>
+                  <p class="page-header__text pt-24">為了解決這些問題，我們在家長 App 和內部系統中設計了一個整合的即時通訊系統。這個 IM 系統連接家長、客服和輔導，解決溝通零散、職責不清和低效率的問題。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row y-gap-16 justify-between">
+                <div class="col-lg-4">
+                  <h4 class="text-xl fw-600">我的角色</h4>
+                </div>
+                <div class="col-lg-8 col-md-10">
+                  <p class="page-header__text">作為設計主管，我負責完整的設計流程——從研究和工作流程定義到資訊架構和 UI/UX 設計。我與產品經理、工程師和跨職能團隊（包括客服和輔導）密切合作。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research & Insight -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>研究與洞察</span>
+                </div>
+                <h2 class="sectionHeading__title">框定真正的問題</h2>
+                <p class="y-gap-16 pt-24 text-left">我們使用設計思考方法從根本定義問題，透過「痛點 → 洞察 → 解決方案」分析情況，確保我們的設計決策能夠解決最緊急和最具影響力的需求。</p>
+              </div>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-lg-6">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">利益相關者訪談<br>清楚定義問題</h2>
+                <p class="ty-gap-16 pt-24 text-left">為了理解營運瓶頸，我們對關鍵利益相關者進行了深入訪談——客服人員、輔導、排課管理員和內部主管。</p>
+                <p class="y-gap-16 pt-24 text-left pb-24">從大量會議記錄和訪談稿中，我們將模糊的「溝通問題」提煉成三個可透過設計解決的關鍵痛點：</p>
+              </div>
+            </div>
+            <div class="d-flex sm:direction-column items-center col-lg-6">
+              <section class="">
+                <div class="row no-gutters justify-content-center">
+                  <div class="bg-white border-light rounded-8 shadow-card">
+                    <div class="shopCompleted-footer__wrap">
+                      <h5 class="title">核心問題綜合分析</h5>
+                      <div class="item">
+                        <span class="text-16 fw-600 text-black col-6">痛點</span>
+                        <span class="text-16 fw-600 text-black col-6">洞察</span>
+                      </div>
+                      <div class="item">
+                        <span class="col-6"><b>零散的管道：</b><br>家長和內部團隊不斷在 LINE、WhatsApp、WeChat 之間切換</span>
+                        <span class="col-6">缺乏統一平台導致重複工作流程和資訊缺口。平均每週浪費 100 分鐘在訊息轉發上，增加人力成本和遺漏資訊的風險</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>無法衡量的工作時數：</b><br>難以追蹤 KPI 或系統化管理工單</span>
+                        <span class="col-6">缺乏案件所有權、權限和結案記錄，使得客服和管理者難以追蹤進度或評估團隊表現——阻礙改進和培訓</span>
+                      </div>
+                      <div class="item -border-none">
+                        <span class="col-6"><b>不明確的職責：</b><br>客服和輔導之間界限模糊；<br>請假期間需要手動交接案件</span>
+                        <span class="col-6">內部角色缺乏清晰度，在沒有任務分配系統的情況下，輔導經常需要手動轉交——特別是在假期期間——導致潛在的服務中斷和資訊遺漏</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="layout-pt-md"></div>
+
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <h2 class="sectionHeading__title">📌 回歸到人</h2>
+                <p class="y-gap-16 pt-24">為了確保以使用者為中心的設計，我們將訪談洞察轉化為使用者故事，反映每個角色的真實需求和目標：</p>
+              </div>
+              <div class="row x-gap-60 y-gap-48 pt-60 sm:pt-40">
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-red-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/parent.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">家長</h4>
+                      <p class="mt-12">「作為一位關心孩子教育的家長，我想透過官方管道提問並追蹤問題狀態，這樣我就不會擔心被忽視。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-green-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/customer_service.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">客服人員</h4>
+                      <p class="mt-12">「作為服務人員，我需要在主要工作平台中收到新工單的即時通知，這樣我可以維持工作流程並符合服務標準，不會遺漏任何事情。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/advisor.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">輔導</h4>
+                      <p class="mt-12">「作為輔導，我想清楚地只看到分配給我的案件，這樣我可以專注於支援我負責的家長，而不會被行政雜務淹沒。」</p>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-6">
+                  <div class="d-flex sm:direction-column items-center">
+                    <div class="d-flex justify-center items-center flex-grow size-icon-100 rounded-full bg-yellow-light mr-30 sm:mr-0">
+                      <img src="img/projects/im/manager.png">
+                    </div>
+                    <div class="sm:mt-20 text-left">
+                      <h4 class="text-xl fw-600 lh-1">管理者</h4>
+                      <p class="mt-12">「作為部門主管，我想要一個視覺化案件進度的儀表板，這樣我可以客觀評估表現、識別瓶頸並提供有針對性的培訓。」</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sectionHeading ">
+                <h5 class="title y-gap-16 pt-24">因此，我們根據上述痛點和使用者故事定義了 MVP，優先考慮高影響力的解決方案。</h5>
+              </div>
+            </div>            
+            <div class="pt-60"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Research & Insight -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- The Goal -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="row justify-center text-center">
+                <div class="col-auto">
+                  <div class="sectionHeading__subtitle">
+                    <span>目標</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">透過結構、清晰度和速度<br>解決訊息混亂</h2>
+                    <p class="y-gap-16 pt-24">在釐清核心問題後，我們專注於解決以下關鍵挑戰：</p>
+                    <div class="text-left">
+                      <ul class="ul-list pt-12">
+                        <li class=""><b>建立統一的溝通平台：</b>終結平台切換的混亂</li>
+                        <li class=""><b>清楚定義角色和權限：</b>讓輔導和客服擺脫繁重的訊息交接</li>
+                        <li class=""><b>提高營運效率：</b>透過系統化減少重複工作，實現可追蹤的 KPI</li>
+                        <li class=""><b>快速交付和驗證：</b>研究 SendBird 整合並在三個月內推出功能性 MVP，確保解決方案能在真實環境中快速測試和迭代</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- The Goal -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Strategy & Solution -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="sectionHeading">
+                <div class="sectionHeading__subtitle">
+                  <span>策略與解決方案</span>
+                </div>
+              </div>
+            </div>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h2 class="sectionHeading__title">從混亂到清晰：<br>以案件為基礎的核心架構</h2>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                    <p class="">
+                      我們採用了以案件為基礎的設計策略——每個家長詢問都被視為一個獨立、可追蹤的案件——建立了一個協作、可追蹤和負責任的溝通結構。<br>
+                      與傳統的聊天式通訊相比，以案件為導向的模型提供了幾個優勢：
+                    </p>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 order-lg-1 order-1 text-left">
+                    <ol class="ol-list y-gap-16 text-left">
+                      <li class=""><b>集中的資訊與歷史記錄：</b>所有互動、負責人和狀態都綁定到每個案件</li>
+                      <li class=""><b>清楚的角色分配：</b>案件自動或手動分配，確保連續性和問責制</li>
+                      <li class=""><b>可管理且可衡量：</b>案件狀態和歷史幫助管理者追蹤進度和評估表現</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 1：零散的訊息使追蹤變得困難</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">家長使用多個應用程式（LINE、WeChat、WhatsApp），使訊息難以整合</li>
+                      <li class="">沒有標記或對話記錄——客服人員無法追蹤歷史或進度</li>
+                      <li class="">私人通訊工具缺乏企業監督和合規功能</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">在家長應用程式中嵌入「提問」和聊天功能</li>
+                    </ul>
+                  </div>
+                  <section class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <div class="container">
+                      <div data-anim-wrap class="row y-gap-48 pt-20 md:pt-48">
+                        <div data-anim-child="slide-up delay-1" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                              <img class="max-w-100" src="img/projects/im/case.png" alt="image">
+                            </div>
+                          </div>
+                        </div>
+          
+                        <div data-anim-child="slide-up delay-2" class="col-lg-6 col-sm-6 is-in-view">
+                          <div class="text-center hover-group">
+                            <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                              <img class="max-w-100" src="img/projects/im/message.png" alt="image">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 2：沒有分配系統 → 所有權模糊</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">沒有分配流程；輔導請假期間需要手動交接案件</li>
+                      <li class="">缺乏所有權可見性——使後續跟進不明確</li>
+                      <li class="">假期期間服務中斷風險高</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">在內部 MMS 系統中新增儀表板頁面和分配功能，包括認領、指派和案件歷史頁面</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-1">
+                    <img src="img/projects/im/dashboard.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 3：高重複性，低效率</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">常見問題需要重複回應，浪費時間</li>
+                      <li class="">客服人員之間回應品質不一致</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">在案件回覆介面中新增預設回應，在管理面板中集中管理</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/im/canned.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="layout-pt-sm layout-pb-lg">
+              <div class="container">
+                <div class="row y-gap-32 justify-between">
+                  <div class="sectionHeading ">
+                    <h5 class="title">🎯 挑戰 4：輔導的搜尋和案件追蹤痛點</h5>
+                  </div>
+                  <div class="col-xl-4 col-lg-6 order-lg-1 order-1 text-left">
+                    <p><b>問題</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">輔導每週花費超過 100 分鐘轉發訊息或確認案件狀態</li>
+                      <li class="">沒有個人化的任務儀表板或篩選選項</li>
+                    </ul>
+                    <p class="y-gap-16 pt-24"><b>解決方案</b></p>
+                    <ul class="ul-list y-gap-16 text-left">
+                      <li class="">建立「我的任務」頁面，讓輔導可以輕鬆查看分配給他們的案件 → 使他們能夠專注於相關工作，同時減少情境切換和訊息轉發</li>
+                    </ul>
+                  </div>
+                  <div class="col-xl-8 col-lg-6 order-lg-2 order-2">
+                    <img src="img/projects/im/my_task.png" alt="image" class="initial-img">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- End of Strategy & Solution -->
+
+      <div class="layout-pt-md"></div>
+
+      
+        
+      <!-- Final Design & Flow -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <section class="layout-pt-sm layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center text-center">
+                  <div class="col-xl-8 col-lg-7">
+                    <div class="sectionHeading__subtitle">
+                      <span>最終設計與流程</span>
+                    </div>
+                    <div class="sectionHeading">
+                      <h2 class="sectionHeading__title">對家長：簡單且透明</h2>
+                      <p class="sectionHeading__text mt-20">家長可以輕鬆地在應用程式中點擊「提問」按鈕發起支援請求，開啟與特定案件綁定的聊天對話。這允許即時溝通，同時隨時實現即時狀態追蹤和訊息歷史存取。</p>                          
+                    </div>
+                  </div>
+                </div>
+                <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                  <div data-anim-child="slide-up delay-1" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_1.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-2" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_2.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_3.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+      
+                  <div data-anim-child="slide-up delay-3" class="col-lg-3 col-sm-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center size-255 mx-auto rounded-full bg-white shadow-card | hg:bg-text-dark t-base">
+                        <img class="max-w-100" src="img/projects/im/ask_a_quesion_4.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="layout-pt-sm layout-pb-sm">
+              <div class="container">
+                <div class="row justify-center text-center">
+                  <div class="col-xl-8 col-lg-7">
+                    <div class="sectionHeading">
+                      <h2 class="sectionHeading__title">對內部團隊：清楚的任務，更快的工作流程</h2>
+                      <p>系統發送新任務的即時通知，結合案件分配邏輯和「我的任務」儀表板，讓每個團隊成員快速掌握他們的職責。端到端工作流程支援全面的案件記錄，實現高效的 KPI 管理和案件追蹤。</p>
+                    </div>
+                  </div>
+                </div>
+                <div data-anim-wrap class="row y-gap-48 pt-60 md:pt-48">
+                  <div data-anim-child="slide-up delay-1" class="col-md-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center">
+                        <img class="max-w-100" src="img/projects/im/notification_center.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+    
+                  <div data-anim-child="slide-up delay-2" class="col-md-6">
+                    <div class="text-center hover-group">
+                      <div class="d-flex justify-center items-center">
+                        <img class="max-w-100" src="img/projects/im/case_history.png" alt="image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            
+          </div>
+        </div>
+      </section>
+      <!-- End of Design & Flow -->
+
+      <div class="layout-pt-md"></div>
+
+      <!-- Results & Impact -->
+      <section class="layout-pt-md layout-pb-md section-bg-color">
+        <div class="section-bg-color__item -wide"></div>
+        <div class="container">
+          <div class="row justify-center text-center">
+            <div class="col-auto">
+              <div class="row justify-center text-center">
+                <div class="col-xl-8 col-lg-7">
+                  <div class="sectionHeading__subtitle">
+                    <span>成果與影響</span>
+                  </div>
+                  <div class="sectionHeading">
+                    <h2 class="sectionHeading__title">將設計轉化為商業價值</h2>
+                    <div class="text-left">
+                      <ul class="ul-list y-gap-16 y-gap-16 pt-24">
+                        <li class=""><b>減少輔導工作量：</b>透過系統化訊息交接，每位輔導每週節省高達 100 分鐘的重複溝通任務。整個團隊每週總共節省 3,000 分鐘，讓輔導能夠更專注於教學和學生照護</li>
+                        <li class=""><b>數據驅動決策：</b>管理者首次獲得了乾淨、結構化的案件數據。他們可以即時追蹤案件類型、解決時間和團隊工作量——實現更智慧的服務優化</li>
+                        <li class=""><b>改善團隊協作：</b>更清楚的角色、更智慧的工作流程和可見的問責制大幅減少了資訊缺口造成的摩擦，提升整體團隊滿意度和營運和諧</li>
+                        <li class=""><b>快速 MVP 推出：</b>我們透過整合 SendBird，在三個月內交付了功能性 MVP，實現了在真實環境中快速測試、迭代和驗證核心解決方案</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Results & Impact -->
+
+      <div class="layout-pt-md"></div>
+
+      <div class="layout-pt-lg"></div>
+
+      <div class="layout-pb-lg">
+        <section class="">
+          <div class="container">
+            <div class="related-nav py-30">
+              <div class="row justify-between items-center">
+                <div class="col-md-auto col-6">
+                  <a data-barba href="onelink_plus_zh.html" class="related-nav__item -prev decoration-none">
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-left"></i>
+                    </div>
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">上一個</div>
+                      <p class="text-dark mt-8">學習管理平台 (SaaS)</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-auto col-6 d-flex justify-end">
+                  <a data-barba href="oneanswer_zh.html" class="related-nav__item -prev text-right decoration-none">
+                    <div class="related-nav__content">
+                      <div class="text-xl fw-600">下一個</div>
+                      <p class="text-dark mt-8">即時解答功能</p>
+                    </div>
+                    <div class="related-nav__arrow">
+                      <i class="icon size-20 pt-4" data-feather="arrow-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <!-- footer -->
+      <div class="svg-shape">
+        <svg width="1920" height="60" viewBox="0 0 1920 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 30C0 13.4315 13.4315 0 30 0H1890C1906.57 0 1920 13.4315 1920 30V60H0V30Z" fill="#1A3454" />
+        </svg>
+      </div>
+      <footer class="footer -type-1 bg-dark-1">
+        <div class="container bg-dark-1">
+          <div class="row y-gap-16 justify-between items-center sm:justify-center sm:text-center">
+            <div class="col-md-auto">
+              <div class="footer__right text-white">
+                <span class="footer__copyright text-white">
+                  Copyright © 2025 Yiping Lee
+                </span>
+              </div>
+            </div>
+
+            <div class="col-md-auto">
+              <div class="footer__right">
+                <div class="footer__socials socials sm:justify-center">
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                  <a href="about-1.html" class="socials__item text-dark-1">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End of footer -->
+
+    </main>
+  </div>
+  <!-- barba container end -->
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/atropos@1.0.1/atropos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
